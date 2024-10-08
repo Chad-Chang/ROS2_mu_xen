@@ -1,0 +1,4 @@
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:14:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kqos_depth[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   14 |     int8_t [01;35m[Kqos_depth[m[K = 10;
+      |            [01;35m[K^~~~~~~~~[m[K

@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target mujoco_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/main.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable mujoco_node[0m
+[100%] Built target mujoco_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/lib/mujoco_test2/mujoco_node
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/package_run_dependencies/mujoco_test2
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/parent_prefix_path/mujoco_test2
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/ament_prefix_path.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/ament_prefix_path.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/path.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/path.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.bash
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.zsh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/package.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/packages/mujoco_test2
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/cmake/mujoco_test2Config.cmake
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/cmake/mujoco_test2Config-version.cmake
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/package.xml

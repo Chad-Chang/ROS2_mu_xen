@@ -1,0 +1,32 @@
+[0.018s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.084s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.106s] [ 50%] Built target publish_node
+[0.127s] [ 75%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[1.633s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In member function ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’:
+[1.633s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:126:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksimstart[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.633s]   126 |     mjtNum [01;35m[Ksimstart[m[K = d_->time;
+[1.634s]       |            [01;35m[K^~~~~~~~[m[K
+[5.232s] [100%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+[5.507s] [100%] Built target mujoco_sim_node
+[5.524s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '0': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[5.580s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_sim_test
+[5.588s] -- Install configuration: ""
+[5.589s] -- Execute custom install script
+[5.589s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/lib/mujoco_sim_test/mujoco_sim_node
+[5.590s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/lib/mujoco_sim_test/publish_node
+[5.590s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/package_run_dependencies/mujoco_sim_test
+[5.590s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/parent_prefix_path/mujoco_sim_test
+[5.591s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/ament_prefix_path.sh
+[5.591s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/ament_prefix_path.dsv
+[5.591s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/path.sh
+[5.592s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/path.dsv
+[5.592s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.bash
+[5.592s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.sh
+[5.592s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.zsh
+[5.593s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.dsv
+[5.593s] -- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.dsv
+[5.606s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/packages/mujoco_sim_test
+[5.607s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/cmake/mujoco_sim_testConfig.cmake
+[5.607s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/cmake/mujoco_sim_testConfig-version.cmake
+[5.608s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.xml
+[5.613s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '0': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_sim_test

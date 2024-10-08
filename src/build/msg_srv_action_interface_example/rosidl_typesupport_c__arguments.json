@@ -1,0 +1,37 @@
+{
+  "package_name": "msg_srv_action_interface_example",
+  "output_dir": "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_typesupport_c/msg_srv_action_interface_example",
+  "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_c/resource",
+  "idl_tuples": [
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example:msg/ArithmeticArgument.idl",
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example:srv/ArithmeticOperator.idl",
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example:action/ArithmeticChecker.idl"
+  ],
+  "ros_interface_dependencies": [
+    "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl",
+    "action_msgs:/opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/opt/ros/foxy/share/action_msgs/srv/CancelGoal.idl",
+    "unique_identifier_msgs:/opt/ros/foxy/share/unique_identifier_msgs/msg/UUID.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_c/__init__.py",
+    "/opt/ros/foxy/share/rosidl_typesupport_c/resource/action__type_support.c.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em",
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example/msg/ArithmeticArgument.idl",
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example/srv/ArithmeticOperator.idl",
+    "/home/chad/ros2_ws/src/build/msg_srv_action_interface_example/rosidl_adapter/msg_srv_action_interface_example/action/ArithmeticChecker.idl",
+    "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl",
+    "/opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl",
+    "/opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl",
+    "/opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl",
+    "/opt/ros/foxy/share/action_msgs/srv/CancelGoal.idl",
+    "/opt/ros/foxy/share/unique_identifier_msgs/msg/UUID.idl"
+  ]
+}

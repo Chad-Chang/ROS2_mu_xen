@@ -1,0 +1,4 @@
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In member function ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:125:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsimEndtime[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  125 |     double [01;35m[KsimEndtime[m[K = 5;
+      |            [01;35m[K^~~~~~~~~~[m[K

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/chad/ros2_ws/src/build/mujoco_sim_test/mujoco_sim_node" "/home/chad/ros2_ws/src/build/mujoco_sim_test/publish_node" "TARGETS" "mujoco_sim_node" "publish_node" "DESTINATION" "lib/mujoco_sim_test")

@@ -1,0 +1,69 @@
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:21:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+   26 | class MujocoSimNode([01;31m[K)[m[K// : public rclcpp::Node
+      |                     [01;31m[K^[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:7:31:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+    7 | MujocoSimNode* MujocoSimNode::[01;31m[Ksim_node_instance_[m[K = nullptr;
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:9:70:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+    9 | MujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions & node_options[01;31m[K)[m[K
+      |                                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:93:31:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+   93 | MujocoSimNode::~MujocoSimNode([01;31m[K)[m[K
+      |                               [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:37:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+  103 | void MujocoSimNode::simulation_loop([01;31m[K)[m[K
+      |                                     [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:130:90:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+  130 | void MujocoSimNode::keyboard(GLFWwindow* window, int key, int scancode, int act, int mods[01;31m[K)[m[K
+      |                                                                                          [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:142:83:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+  142 | void MujocoSimNode::mouse_button(GLFWwindow* window, int button, int act, int mods[01;31m[K)[m[K
+      |                                                                                   [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:155:76:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+  155 | void MujocoSimNode::mouse_move(GLFWwindow* window, double xpos, double ypos[01;31m[K)[m[K
+      |                                                                            [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:186:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+  186 | void MujocoSimNode::scroll(GLFWwindow* window, double xoffset, double yoffset[01;31m[K)[m[K
+      |                                                                              [01;31m[K^[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+   26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,26 @@
+[0.022s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[0.089s] [35m[1mScanning dependencies of target mujoco_node[0m
+[0.131s] [ 33%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/main.cpp.o[0m
+[2.040s] [ 66%] [32m[1mLinking CXX executable mujoco_node[0m
+[2.183s] [100%] Built target mujoco_node
+[2.196s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[2.257s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_test2
+[2.267s] -- Install configuration: ""
+[2.268s] -- Execute custom install script
+[2.268s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/lib/mujoco_test2/mujoco_node
+[2.269s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/package_run_dependencies/mujoco_test2
+[2.269s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/parent_prefix_path/mujoco_test2
+[2.269s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/ament_prefix_path.sh
+[2.270s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/ament_prefix_path.dsv
+[2.270s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/path.sh
+[2.270s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/environment/path.dsv
+[2.271s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.bash
+[2.272s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.sh
+[2.272s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.zsh
+[2.272s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/local_setup.dsv
+[2.273s] -- Symlinking: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/package.dsv
+[2.289s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/ament_index/resource_index/packages/mujoco_test2
+[2.290s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/cmake/mujoco_test2Config.cmake
+[2.290s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/cmake/mujoco_test2Config-version.cmake
+[2.291s] -- Up-to-date symlink: /home/chad/ros2_ws/src/install/mujoco_test2/share/mujoco_test2/package.xml
+[2.296s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_test2

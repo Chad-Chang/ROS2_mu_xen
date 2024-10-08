@@ -1,0 +1,2 @@
+Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/chad/ros2_ws/src/mujoco_test2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chad/ros2_ws/src/install/mujoco_test2
+Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/chad/ros2_ws/src/mujoco_test2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chad/ros2_ws/src/install/mujoco_test2

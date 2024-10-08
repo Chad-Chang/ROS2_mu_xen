@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target mujoco_sim_node[0m
+[ 50%] Built target publish_node
+[ 75%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:280:23:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::executors::SingleThreadedExecutor::spin(std::shared_ptr<MujocoSimNode>&)[m[K’
+  280 |     executor.spin(node[01;31m[K)[m[K;
+      |                       [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:15[m[K,
+                 from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:66:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::executors::SingleThreadedExecutor::spin()[m[K’
+   66 |   [01;36m[Kspin[m[K() override;
+      |   [01;36m[K^~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:66:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

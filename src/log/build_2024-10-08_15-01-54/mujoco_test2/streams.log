@@ -1,0 +1,38 @@
+[0.018s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/chad/ros2_ws/src/mujoco_test2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chad/ros2_ws/src/install/mujoco_test2
+[0.037s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.068s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.285s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.297s] -- Found msg_srv_action_interface_example: 0.0.0 (/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/share/msg_srv_action_interface_example/cmake)
+[0.321s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.324s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.420s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.566s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.608s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.610s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.765s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[0.799s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.906s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.908s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.909s] -- Configured cppcheck include dirs: /home/chad/ros2_ws/src/mujoco_test2/include;/home/chad/ros2_ws/src/mujoco_test2/../../mujoco_3.1.6/include/
+[0.909s] -- Configured cppcheck exclude dirs and/or files: 
+[0.911s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.911s] -- Configured cpplint exclude dirs and/or files: 
+[0.912s] -- Added test 'lint_cmake' to check CMake code style
+[0.915s] -- Added test 'uncrustify' to check C / C++ code style
+[0.915s] -- Configured uncrustify additional arguments: 
+[0.915s] -- Added test 'xmllint' to check XML markup files
+[0.919s] -- Configuring done
+[0.928s] -- Generating done
+[0.929s] -- Build files have been written to: /home/chad/ros2_ws/src/build/mujoco_test2
+[0.936s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/chad/ros2_ws/src/mujoco_test2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/chad/ros2_ws/src/install/mujoco_test2
+[0.942s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[1.012s] [35m[1mScanning dependencies of target mujoco_node[0m
+[1.031s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/sim.cpp.o[0m
+[1.045s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/sim.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ksim.h: No such file or directory
+[1.045s]     2 | #include [01;31m[K"sim.h"[m[K
+[1.045s]       |          [01;31m[K^~~~~~~[m[K
+[1.046s] compilation terminated.
+[1.046s] make[2]: *** [CMakeFiles/mujoco_node.dir/build.make:63: CMakeFiles/mujoco_node.dir/src/sim.cpp.o] Error 1
+[1.046s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_node.dir/all] Error 2
+[1.046s] make: *** [Makefile:141: all] Error 2
+[1.051s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12

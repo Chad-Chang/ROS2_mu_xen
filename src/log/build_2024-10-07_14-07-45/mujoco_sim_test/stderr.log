@@ -1,0 +1,4 @@
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:17:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kqos_profile[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   17 |     auto [01;35m[Kqos_profile[m[K = rclcpp::QoS(rclcpp::KeepLast(10));
+      |          [01;35m[K^~~~~~~~~~~[m[K

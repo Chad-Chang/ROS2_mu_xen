@@ -1,0 +1,18 @@
+[0.024s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.091s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.121s] [ 25%] [32m[1mLinking CXX executable publish_node[0m
+[0.138s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[0.214s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.214s] (.text+0x24): undefined reference to `main'
+[0.215s] collect2: error: ld returned 1 exit status
+[0.217s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[0.217s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[0.217s] make[1]: *** Waiting for unfinished jobs....
+[1.784s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[1.784s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:18:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KQOS_RKL10V[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.784s]    18 |     const auto [01;35m[KQOS_RKL10V[m[K =
+[1.784s]       |                [01;35m[K^~~~~~~~~~[m[K
+[5.501s] [ 75%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+[5.769s] [ 75%] Built target mujoco_sim_node
+[5.770s] make: *** [Makefile:141: all] Error 2
+[5.774s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

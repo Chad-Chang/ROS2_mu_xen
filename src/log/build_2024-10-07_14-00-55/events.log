@@ -1,0 +1,62 @@
+[0.000000] (-) TimerEvent: {}
+[0.000544] (-) JobUnselected: {'identifier': 'msg_srv_action_interface_example'}
+[0.000638] (mujoco_sim_test) JobQueued: {'identifier': 'mujoco_sim_test', 'dependencies': OrderedDict([('msg_srv_action_interface_example', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example')])}
+[0.000770] (mujoco_sim_test) JobStarted: {'identifier': 'mujoco_sim_test'}
+[0.017673] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'cmake'}
+[0.019385] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'build'}
+[0.021340] (mujoco_sim_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/chad/ros2_ws/src/build/mujoco_sim_test', '--', '-j12', '-l12'], 'cwd': '/home/chad/ros2_ws/src/build/mujoco_sim_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'chad'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1515'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/chad'), ('OLDPWD', '/home/chad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '182688'), ('_colcon_cd_root', '/home/chad/ros2_install'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/chad/ros2_ws/src/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'chad'), ('JOURNAL_STREAM', '8:46330'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/chad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/chad-Default-string:@/tmp/.ICE-unix/1562,unix/chad-Default-string:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', 'd12776cb9bdc48f3b31d0fa7df03e5e0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('TILIX_ID', '9179b3c4-3c10-4792-b188-aa5679ad5785'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chad/ros2_ws/src/install/mujoco_sim_test:/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chad/ros2_ws/src/build/mujoco_sim_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy')]), 'shell': False}
+[0.090657] (mujoco_sim_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target mujoco_sim_node\x1b[0m\n'}
+[0.099374] (-) TimerEvent: {}
+[0.122266] (mujoco_sim_test) StdoutLine: {'line': b'[ 50%] Built target publish_node\n'}
+[0.136307] (mujoco_sim_test) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o\x1b[0m\n'}
+[0.199550] (-) TimerEvent: {}
+[0.299960] (-) TimerEvent: {}
+[0.400334] (-) TimerEvent: {}
+[0.500810] (-) TimerEvent: {}
+[0.601290] (-) TimerEvent: {}
+[0.701769] (-) TimerEvent: {}
+[0.802234] (-) TimerEvent: {}
+[0.902688] (-) TimerEvent: {}
+[1.003159] (-) TimerEvent: {}
+[1.103651] (-) TimerEvent: {}
+[1.204150] (-) TimerEvent: {}
+[1.304608] (-) TimerEvent: {}
+[1.405067] (-) TimerEvent: {}
+[1.505505] (-) TimerEvent: {}
+[1.591802] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.592308] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:280:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::executors::SingleThreadedExecutor::spin(std::shared_ptr<MujocoSimNode>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.592516] (mujoco_sim_test) StderrLine: {'line': b'  280 |     executor.spin(node\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[1.592695] (mujoco_sim_test) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.592863] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[1.593029] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.593191] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:15\x1b[m\x1b[K,\n'}
+[1.593351] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.593509] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:66:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvirtual void rclcpp::executors::SingleThreadedExecutor::spin()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.593670] (mujoco_sim_test) StderrLine: {'line': b'   66 |   \x1b[01;36m\x1b[Kspin\x1b[m\x1b[K() override;\n'}
+[1.593831] (mujoco_sim_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.593990] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:66:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 1 provided\n'}
+[1.594175] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:281:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexecutor\x1b[m\x1b[K\xe2\x80\x99 is not a class, namespace, or enumeration\n'}
+[1.594339] (mujoco_sim_test) StderrLine: {'line': b'  281 |     \x1b[01;31m\x1b[Kexecutor\x1b[m\x1b[K::shutdown();\n'}
+[1.594499] (mujoco_sim_test) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[1.605652] (-) TimerEvent: {}
+[1.706071] (-) TimerEvent: {}
+[1.806509] (-) TimerEvent: {}
+[1.906962] (-) TimerEvent: {}
+[2.007382] (-) TimerEvent: {}
+[2.107813] (-) TimerEvent: {}
+[2.208453] (-) TimerEvent: {}
+[2.308956] (-) TimerEvent: {}
+[2.409398] (-) TimerEvent: {}
+[2.509854] (-) TimerEvent: {}
+[2.610301] (-) TimerEvent: {}
+[2.710754] (-) TimerEvent: {}
+[2.811312] (-) TimerEvent: {}
+[2.911772] (-) TimerEvent: {}
+[3.012218] (-) TimerEvent: {}
+[3.091333] (mujoco_sim_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1\n'}
+[3.091965] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2\n'}
+[3.092349] (mujoco_sim_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[3.094491] (mujoco_sim_test) CommandEnded: {'returncode': 2}
+[3.112345] (-) TimerEvent: {}
+[3.149823] (mujoco_sim_test) JobEnded: {'identifier': 'mujoco_sim_test', 'rc': 2}
+[3.160791] (-) EventReactorShutdown: {}

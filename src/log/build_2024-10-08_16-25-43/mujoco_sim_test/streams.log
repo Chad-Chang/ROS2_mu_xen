@@ -1,0 +1,17 @@
+[0.021s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.081s] [35m[1mScanning dependencies of target publish_node[0m
+[0.081s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.120s] [ 25%] [32mBuilding CXX object CMakeFiles/publish_node.dir/src/publisher.cpp.o[0m
+[0.123s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[1.649s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.649s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:62:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.649s]    62 |     std::thread [01;31m[Ksimulation_thread_[m[K
+[1.649s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.650s]       |                                   [32m[K;[m[K
+[3.358s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+[3.358s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[3.358s] make[1]: *** Waiting for unfinished jobs....
+[3.386s] [ 75%] [32m[1mLinking CXX executable publish_node[0m
+[3.585s] [ 75%] Built target publish_node
+[3.587s] make: *** [Makefile:141: all] Error 2
+[3.590s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

@@ -1,0 +1,138 @@
+[0.204s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'mujoco_sim_test']
+[0.204s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1c8b0b3b20>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['mujoco_sim_test'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1c8b0b3b20>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1c8b0c0070>)
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.372s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/chad/ros2_ws/src'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(msg_srv_action_interface_example) by extension 'ros'
+[0.390s] DEBUG:colcon.colcon_core.package_identification:Package 'msg_srv_action_interface_example' with type 'ros.ament_cmake' and name 'msg_srv_action_interface_example'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extensions ['ignore', 'ignore_ament_install']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extension 'ignore'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extension 'ignore_ament_install'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extensions ['colcon_pkg']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extension 'colcon_pkg'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extensions ['colcon_meta']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extension 'colcon_meta'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extensions ['ros']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(mujoco_sim_test) by extension 'ros'
+[0.391s] DEBUG:colcon.colcon_core.package_identification:Package 'mujoco_sim_test' with type 'ros.ament_cmake' and name 'mujoco_sim_test'
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.407s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'msg_srv_action_interface_example' in 'msg_srv_action_interface_example'
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.409s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/chad/ros2_ws/src/install
+[0.410s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_target' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.482s] DEBUG:colcon.colcon_core.verb:Building package 'mujoco_sim_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chad/ros2_ws/src/build/mujoco_sim_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chad/ros2_ws/src/install/mujoco_sim_test', 'merge_install': False, 'path': '/home/chad/ros2_ws/src/mujoco_sim_test', 'symlink_install': True, 'test_result_base': None}
+[0.482s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.483s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.484s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/chad/ros2_ws/src/mujoco_sim_test' with build type 'ament_cmake'
+[0.484s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/chad/ros2_ws/src/mujoco_sim_test'
+[0.486s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.486s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.486s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[6.129s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '0': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[6.181s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_sim_test
+[6.218s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mujoco_sim_test)
+[6.220s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '0': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --install /home/chad/ros2_ws/src/build/mujoco_sim_test
+[6.224s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test' for CMake module files
+[6.225s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test' for CMake config files
+[6.225s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_sim_test', 'cmake_prefix_path')
+[6.226s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.ps1'
+[6.227s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.dsv'
+[6.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.sh'
+[6.229s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib'
+[6.229s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/bin'
+[6.229s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib/pkgconfig/mujoco_sim_test.pc'
+[6.230s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib/python3.8/site-packages'
+[6.230s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/bin'
+[6.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.ps1'
+[6.232s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.dsv'
+[6.233s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.sh'
+[6.234s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.bash'
+[6.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.zsh'
+[6.237s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chad/ros2_ws/src/install/mujoco_sim_test/share/colcon-core/packages/mujoco_sim_test)
+[6.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mujoco_sim_test)
+[6.284s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test' for CMake module files
+[6.285s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test' for CMake config files
+[6.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_sim_test', 'cmake_prefix_path')
+[6.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.ps1'
+[6.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.dsv'
+[6.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/hook/cmake_prefix_path.sh'
+[6.288s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib'
+[6.289s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/bin'
+[6.289s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib/pkgconfig/mujoco_sim_test.pc'
+[6.289s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/lib/python3.8/site-packages'
+[6.289s] Level 1:colcon.colcon_core.environment:checking '/home/chad/ros2_ws/src/install/mujoco_sim_test/bin'
+[6.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.ps1'
+[6.291s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.dsv'
+[6.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.sh'
+[6.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.bash'
+[6.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.zsh'
+[6.293s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chad/ros2_ws/src/install/mujoco_sim_test/share/colcon-core/packages/mujoco_sim_test)
+[6.293s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.294s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.305s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.305s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.306s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.330s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.331s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chad/ros2_ws/src/install/local_setup.ps1'
+[6.333s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chad/ros2_ws/src/install/_local_setup_util_ps1.py'
+[6.335s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chad/ros2_ws/src/install/setup.ps1'
+[6.337s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chad/ros2_ws/src/install/local_setup.sh'
+[6.339s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chad/ros2_ws/src/install/_local_setup_util_sh.py'
+[6.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chad/ros2_ws/src/install/setup.sh'
+[6.341s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chad/ros2_ws/src/install/local_setup.bash'
+[6.341s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chad/ros2_ws/src/install/setup.bash'
+[6.343s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chad/ros2_ws/src/install/local_setup.zsh'
+[6.343s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chad/ros2_ws/src/install/setup.zsh'

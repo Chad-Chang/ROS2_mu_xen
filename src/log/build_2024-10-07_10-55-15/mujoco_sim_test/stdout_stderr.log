@@ -1,0 +1,20 @@
+[35m[1mScanning dependencies of target mujoco_sim_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:17:32:[m[K [01;31m[Kerror: [m[K‘[01m[KQos[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[KQoS[m[K’?
+   17 |     auto qos_profile = rclcpp::[01;31m[KQos[m[K(rclcpp::KeepLast(10));
+      |                                [01;31m[K^~~[m[K
+      |                                [32m[KQoS[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:80:55:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid MujocoSimNode::subscribe_topic_msg(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’
+   80 |         "test", qos_profile, std::bind([01;31m[KMujocoSimNode::subscribe_topic_msg[m[K, this, _1);
+      |                                        [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:68:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   68 |     void [01;36m[Ksubscribe_topic_msg[m[K(const std_msgs::msg::String::SharedPtr msg) const
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:81:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   81 |     [01;31m[K)[m[K;
+      |     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

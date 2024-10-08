@@ -1,0 +1,26 @@
+[0.021s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.084s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.107s] [ 25%] [32m[1mLinking CXX executable publish_node[0m
+[0.130s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[0.197s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.197s] (.text+0x24): undefined reference to `main'
+[0.197s] collect2: error: ld returned 1 exit status
+[0.200s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[0.200s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[0.200s] make[1]: *** Waiting for unfinished jobs....
+[2.010s] [ 75%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+[2.112s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.113s] (.text+0x24): undefined reference to `main'
+[2.113s] /usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o: in function `MujocoSimNode::MujocoSimNode()':
+[2.113s] mujoco2.cpp:(.text+0x11a): undefined reference to `MujocoSimNode::sim_node_instance_'
+[2.113s] /usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o: in function `MujocoSimNode::keyboard(GLFWwindow*, int, int, int, int)':
+[2.113s] mujoco2.cpp:(.text+0x591): undefined reference to `MujocoSimNode::sim_node_instance_'
+[2.113s] /usr/bin/ld: mujoco2.cpp:(.text+0x59c): undefined reference to `MujocoSimNode::sim_node_instance_'
+[2.114s] /usr/bin/ld: mujoco2.cpp:(.text+0x5b2): undefined reference to `MujocoSimNode::sim_node_instance_'
+[2.114s] /usr/bin/ld: mujoco2.cpp:(.text+0x5bd): undefined reference to `MujocoSimNode::sim_node_instance_'
+[2.114s] /usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o:mujoco2.cpp:(.text+0x603): more undefined references to `MujocoSimNode::sim_node_instance_' follow
+[2.114s] collect2: error: ld returned 1 exit status
+[2.115s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:148: mujoco_sim_node] Error 1
+[2.115s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[2.116s] make: *** [Makefile:141: all] Error 2
+[2.119s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

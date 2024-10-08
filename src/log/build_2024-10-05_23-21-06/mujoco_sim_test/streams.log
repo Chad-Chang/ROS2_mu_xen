@@ -1,0 +1,12 @@
+[0.021s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': AMENT_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.086s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.129s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[1.572s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[1.572s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:73:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktest_subscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_subscribers[m[K’?
+[1.572s]    73 |     [01;31m[Ktest_subscriber_[m[K = this -> create_subscription<ArithmeticArgument>( // subscription callback
+[1.572s]       |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.572s]       |     [32m[Kcount_subscribers[m[K
+[3.100s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+[3.100s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[3.101s] make: *** [Makefile:141: all] Error 2
+[3.104s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': AMENT_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000578] (-) JobUnselected: {'identifier': 'msg_srv_action_interface_example'}
+[0.000679] (mujoco_sim_test) JobQueued: {'identifier': 'mujoco_sim_test', 'dependencies': OrderedDict([('msg_srv_action_interface_example', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example')])}
+[0.000765] (mujoco_sim_test) JobStarted: {'identifier': 'mujoco_sim_test'}
+[0.016313] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'cmake'}
+[0.017400] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'build'}
+[0.018397] (mujoco_sim_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/chad/ros2_ws/src/build/mujoco_sim_test', '--', '-j12', '-l12'], 'cwd': '/home/chad/ros2_ws/src/build/mujoco_sim_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'chad'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1515'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/chad'), ('OLDPWD', '/home/chad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '182688'), ('_colcon_cd_root', '/home/chad/ros2_install'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/chad/ros2_ws/src/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'chad'), ('JOURNAL_STREAM', '8:46330'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/chad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/chad-Default-string:@/tmp/.ICE-unix/1562,unix/chad-Default-string:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', 'd12776cb9bdc48f3b31d0fa7df03e5e0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('TILIX_ID', '9179b3c4-3c10-4792-b188-aa5679ad5785'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chad/ros2_ws/src/install/mujoco_sim_test:/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chad/ros2_ws/src/build/mujoco_sim_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy')]), 'shell': False}
+[0.059906] (mujoco_sim_test) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.092092] (mujoco_sim_test) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099333] (-) TimerEvent: {}
+[0.199809] (-) TimerEvent: {}
+[0.300237] (-) TimerEvent: {}
+[0.308936] (mujoco_sim_test) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.321789] (mujoco_sim_test) StdoutLine: {'line': b'-- Found msg_srv_action_interface_example: 0.0.0 (/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/share/msg_srv_action_interface_example/cmake)\n'}
+[0.344199] (mujoco_sim_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.347949] (mujoco_sim_test) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400377] (-) TimerEvent: {}
+[0.476256] (mujoco_sim_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500506] (-) TimerEvent: {}
+[0.600918] (-) TimerEvent: {}
+[0.622093] (mujoco_sim_test) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.664019] (mujoco_sim_test) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.665542] (mujoco_sim_test) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.701057] (-) TimerEvent: {}
+[0.801495] (-) TimerEvent: {}
+[0.825654] (mujoco_sim_test) StdoutLine: {'line': b'-- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)\n'}
+[0.862253] (mujoco_sim_test) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.901640] (-) TimerEvent: {}
+[0.946984] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.949178] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.949531] (mujoco_sim_test) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/chad/ros2_ws/src/mujoco_sim_test/include;/home/chad/ros2_ws/src/mujoco_sim_test/../../mujoco_3.1.6/include/\n'}
+[0.949724] (mujoco_sim_test) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.951433] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.951625] (mujoco_sim_test) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.952549] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.954778] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.954990] (mujoco_sim_test) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.955287] (mujoco_sim_test) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.958417] (mujoco_sim_test) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.959333] (mujoco_sim_test) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_executable):\n'}
+[0.959564] (mujoco_sim_test) StderrLine: {'line': b'  Cannot find source file:\n'}
+[0.959712] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.959844] (mujoco_sim_test) StderrLine: {'line': b'    src/publish.cpp\n'}
+[0.959971] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.960096] (mujoco_sim_test) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm\n'}
+[0.960221] (mujoco_sim_test) StderrLine: {'line': b'  .hpp .hxx .in .txx\n'}
+[0.960343] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.960465] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.960708] (mujoco_sim_test) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_executable):\n'}
+[0.960843] (mujoco_sim_test) StderrLine: {'line': b'  No SOURCES given to target: publish_node\n'}
+[0.960968] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.961091] (mujoco_sim_test) StderrLine: {'line': b'\n'}
+[0.961212] (mujoco_sim_test) StderrLine: {'line': b'CMake Generate step failed.  Build files cannot be regenerated correctly.\n'}
+[0.966777] (mujoco_sim_test) StderrLine: {'line': b'make: *** [Makefile:266: cmake_check_build_system] Error 1\n'}
+[0.969419] (mujoco_sim_test) CommandEnded: {'returncode': 2}
+[1.001861] (-) TimerEvent: {}
+[1.027474] (mujoco_sim_test) JobEnded: {'identifier': 'mujoco_sim_test', 'rc': 2}
+[1.038258] (-) EventReactorShutdown: {}

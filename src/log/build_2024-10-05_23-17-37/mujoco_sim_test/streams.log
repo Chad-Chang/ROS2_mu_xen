@@ -1,0 +1,29 @@
+[0.022s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': AMENT_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.059s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.091s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.302s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.316s] -- Found msg_srv_action_interface_example: 0.0.0 (/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/share/msg_srv_action_interface_example/cmake)
+[0.339s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.342s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.450s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.598s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.639s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.641s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.824s] -- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[0.886s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.966s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.970s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.970s] -- Configured cppcheck include dirs: /home/chad/ros2_ws/src/mujoco_sim_test/include;/home/chad/ros2_ws/src/mujoco_sim_test/../../mujoco_3.1.6/include/
+[0.970s] -- Configured cppcheck exclude dirs and/or files: 
+[0.973s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.973s] -- Configured cpplint exclude dirs and/or files: 
+[0.974s] -- Added test 'lint_cmake' to check CMake code style
+[0.977s] -- Added test 'uncrustify' to check C / C++ code style
+[0.977s] -- Configured uncrustify additional arguments: 
+[0.978s] -- Added test 'xmllint' to check XML markup files
+[0.981s] -- Configuring done
+[0.992s] -- Generating done
+[0.994s] -- Build files have been written to: /home/chad/ros2_ws/src/build/mujoco_sim_test
+[1.040s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[1.087s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[4.097s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': AMENT_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

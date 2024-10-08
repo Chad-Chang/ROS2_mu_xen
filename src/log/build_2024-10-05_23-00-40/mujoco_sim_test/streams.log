@@ -1,0 +1,28 @@
+[0.016s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.055s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.084s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.289s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.311s] CMake Error at CMakeLists.txt:20 (find_package):
+[0.311s]   By not providing "Findmsg_srv_action_interface_example.cmake" in
+[0.311s]   CMAKE_MODULE_PATH this project has asked CMake to find a package
+[0.311s]   configuration file provided by "msg_srv_action_interface_example", but
+[0.311s]   CMake did not find one.
+[0.311s] 
+[0.311s]   Could not find a package configuration file provided by
+[0.312s]   "msg_srv_action_interface_example" with any of the following names:
+[0.312s] 
+[0.312s]     msg_srv_action_interface_exampleConfig.cmake
+[0.312s]     msg_srv_action_interface_example-config.cmake
+[0.312s] 
+[0.312s]   Add the installation prefix of "msg_srv_action_interface_example" to
+[0.312s]   CMAKE_PREFIX_PATH or set "msg_srv_action_interface_example_DIR" to a
+[0.312s]   directory containing one of the above files.  If
+[0.312s]   "msg_srv_action_interface_example" provides a separate development package
+[0.312s]   or SDK, be sure it has been installed.
+[0.312s] 
+[0.313s] 
+[0.313s] -- Configuring incomplete, errors occurred!
+[0.313s] See also "/home/chad/ros2_ws/src/build/mujoco_sim_test/CMakeFiles/CMakeOutput.log".
+[0.313s] See also "/home/chad/ros2_ws/src/build/mujoco_sim_test/CMakeFiles/CMakeError.log".
+[0.313s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.316s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

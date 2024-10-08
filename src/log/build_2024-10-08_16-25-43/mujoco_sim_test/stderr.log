@@ -1,0 +1,9 @@
+In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:62:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   62 |     std::thread [01;31m[Ksimulation_thread_[m[K
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                   [32m[K;[m[K
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

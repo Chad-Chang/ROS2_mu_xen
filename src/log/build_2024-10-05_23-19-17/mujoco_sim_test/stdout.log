@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target mujoco_sim_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+[100%] Built target mujoco_sim_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/lib/mujoco_sim_test/mujoco_sim_node
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/package_run_dependencies/mujoco_sim_test
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/parent_prefix_path/mujoco_sim_test
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/ament_prefix_path.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/ament_prefix_path.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/path.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/environment/path.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.bash
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.sh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.zsh
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/local_setup.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.dsv
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/ament_index/resource_index/packages/mujoco_sim_test
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/cmake/mujoco_sim_testConfig.cmake
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/cmake/mujoco_sim_testConfig-version.cmake
+-- Symlinking: /home/chad/ros2_ws/src/install/mujoco_sim_test/share/mujoco_sim_test/package.xml

@@ -1,0 +1,11 @@
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:18:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KQOS_RKL10V[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   18 |     const auto [01;35m[KQOS_RKL10V[m[K =
+      |                [01;35m[K^~~~~~~~~~[m[K
+make: *** [Makefile:141: all] Error 2

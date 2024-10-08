@@ -1,0 +1,158 @@
+[0.000000] (-) TimerEvent: {}
+[0.000651] (-) JobUnselected: {'identifier': 'msg_srv_action_interface_example'}
+[0.000897] (-) JobUnselected: {'identifier': 'mujoco_test2'}
+[0.000959] (mujoco_sim_test) JobQueued: {'identifier': 'mujoco_sim_test', 'dependencies': OrderedDict([('msg_srv_action_interface_example', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example')])}
+[0.001026] (mujoco_sim_test) JobStarted: {'identifier': 'mujoco_sim_test'}
+[0.016549] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'cmake'}
+[0.017531] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'build'}
+[0.018684] (mujoco_sim_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/chad/ros2_ws/src/build/mujoco_sim_test', '--', '-j12', '-l12'], 'cwd': '/home/chad/ros2_ws/src/build/mujoco_sim_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'chad'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1515'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/chad'), ('OLDPWD', '/home/chad/ros2_ws/src/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '182688'), ('_colcon_cd_root', '/home/chad/ros2_install'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/chad/ros2_ws/src/install:/home/chad/robot_ws_foxy/src/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'chad'), ('JOURNAL_STREAM', '8:46330'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/chad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/chad-Default-string:@/tmp/.ICE-unix/1562,unix/chad-Default-string:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', 'd12776cb9bdc48f3b31d0fa7df03e5e0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('TILIX_ID', '56a38bdb-a7e1-458a-ae62-75061756d5c0'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chad/ros2_ws/src/build/mujoco_sim_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy')]), 'shell': False}
+[0.085795] (mujoco_sim_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target mujoco_sim_node\x1b[0m\n'}
+[0.099363] (-) TimerEvent: {}
+[0.109681] (mujoco_sim_test) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX executable publish_node\x1b[0m\n'}
+[0.129944] (mujoco_sim_test) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o\x1b[0m\n'}
+[0.199486] (-) TimerEvent: {}
+[0.200164] (mujoco_sim_test) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[0.200513] (mujoco_sim_test) StderrLine: {'line': b"(.text+0x24): undefined reference to `main'\n"}
+[0.200699] (mujoco_sim_test) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[0.203588] (mujoco_sim_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1\n'}
+[0.204240] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2\n'}
+[0.204512] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[0.299638] (-) TimerEvent: {}
+[0.400072] (-) TimerEvent: {}
+[0.500526] (-) TimerEvent: {}
+[0.600940] (-) TimerEvent: {}
+[0.701380] (-) TimerEvent: {}
+[0.801801] (-) TimerEvent: {}
+[0.902257] (-) TimerEvent: {}
+[1.002697] (-) TimerEvent: {}
+[1.103082] (-) TimerEvent: {}
+[1.203481] (-) TimerEvent: {}
+[1.303885] (-) TimerEvent: {}
+[1.404306] (-) TimerEvent: {}
+[1.504700] (-) TimerEvent: {}
+[1.605101] (-) TimerEvent: {}
+[1.611951] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode::MujocoSimNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.612289] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:10:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.612608] (mujoco_sim_test) StderrLine: {'line': b'   10 | : \x1b[01;31m\x1b[KNode\x1b[m\x1b[K("mujoco_sim_node",node_options)\n'}
+[1.612802] (mujoco_sim_test) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.618499] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:10:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode_options\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_node_options_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.619163] (mujoco_sim_test) StderrLine: {'line': b'   10 | : Node("mujoco_sim_node",\x1b[01;31m\x1b[Knode_options\x1b[m\x1b[K)\n'}
+[1.619542] (mujoco_sim_test) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.620525] (mujoco_sim_test) StderrLine: {'line': b'      |                          \x1b[32m\x1b[Krcl_node_options_t\x1b[m\x1b[K\n'}
+[1.620843] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:13:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kdeclare_parameter\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.621088] (mujoco_sim_test) StderrLine: {'line': b'   13 |     this->\x1b[01;31m\x1b[Kdeclare_parameter\x1b[m\x1b[K("qos_depth", 10);\n'}
+[1.621361] (mujoco_sim_test) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.621521] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:15:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_parameter\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.621872] (mujoco_sim_test) StderrLine: {'line': b'   15 |     this->\x1b[01;31m\x1b[Kget_parameter\x1b[m\x1b[K("qos_depth", qos_depth);\n'}
+[1.622012] (mujoco_sim_test) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.622140] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/service.hpp:34\x1b[m\x1b[K,\n'}
+[1.622236] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25\x1b[m\x1b[K,\n'}
+[1.622321] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.622403] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.622484] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.622566] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.622647] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.622734] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.622827] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.622911] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.622993] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16\x1b[m\x1b[K,\n'}
+[1.623075] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.623164] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.623249] (mujoco_sim_test) StderrLine: {'line': b'   21 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Starting MuJoCo Simulation Node");\n'}
+[1.623331] (mujoco_sim_test) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.623413] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.623495] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.623576] (mujoco_sim_test) StderrLine: {'line': b'   21 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Starting MuJoCo Simulation Node");\n'}
+[1.623657] (mujoco_sim_test) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.623737] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.623817] (mujoco_sim_test) StderrLine: {'line': b'   21 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Starting MuJoCo Simulation Node");\n'}
+[1.623905] (mujoco_sim_test) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.623986] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.624074] (mujoco_sim_test) StderrLine: {'line': b'   21 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Starting MuJoCo Simulation Node");\n'}
+[1.624156] (mujoco_sim_test) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.624238] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.624320] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.624402] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.624485] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.624566] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.624647] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.624727] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.624807] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.624888] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.624969] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.625057] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16\x1b[m\x1b[K,\n'}
+[1.625140] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.625221] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.625305] (mujoco_sim_test) StderrLine: {'line': b'   21 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Starting MuJoCo Simulation Node");\n'}
+[1.625388] (mujoco_sim_test) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.625470] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:21:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.625553] (mujoco_sim_test) StderrLine: {'line': b'   21 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Starting MuJoCo Simulation Node");\n'}
+[1.625633] (mujoco_sim_test) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.625737] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/service.hpp:34\x1b[m\x1b[K,\n'}
+[1.625822] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25\x1b[m\x1b[K,\n'}
+[1.625904] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.625996] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.626079] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.626160] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.626245] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.626326] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.626408] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.626489] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.626594] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16\x1b[m\x1b[K,\n'}
+[1.626677] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.626759] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.626851] (mujoco_sim_test) StderrLine: {'line': b'   38 |         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "MuJoCo model load error: %s", error);\n'}
+[1.626934] (mujoco_sim_test) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.627023] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.627107] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.627190] (mujoco_sim_test) StderrLine: {'line': b'   38 |         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "MuJoCo model load error: %s", error);\n'}
+[1.627273] (mujoco_sim_test) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.627354] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.627443] (mujoco_sim_test) StderrLine: {'line': b'   38 |         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "MuJoCo model load error: %s", error);\n'}
+[1.627526] (mujoco_sim_test) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.627612] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[1.627696] (mujoco_sim_test) StderrLine: {'line': b'   38 |         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "MuJoCo model load error: %s", error);\n'}
+[1.627780] (mujoco_sim_test) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.627862] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.627944] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[1.628028] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.628112] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.628195] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.628278] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.628360] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.628443] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.628526] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.628613] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.628694] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16\x1b[m\x1b[K,\n'}
+[1.628777] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.628859] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.628944] (mujoco_sim_test) StderrLine: {'line': b'   38 |         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "MuJoCo model load error: %s", error);\n'}
+[1.629033] (mujoco_sim_test) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.629174] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:38:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.629274] (mujoco_sim_test) StderrLine: {'line': b'   38 |         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "MuJoCo model load error: %s", error);\n'}
+[1.629361] (mujoco_sim_test) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.629445] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:85:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kcreate_wall_timer\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.629531] (mujoco_sim_test) StderrLine: {'line': b'   85 |     timer_ = this->\x1b[01;31m\x1b[Kcreate_wall_timer\x1b[m\x1b[K(\n'}
+[1.629616] (mujoco_sim_test) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.629730] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:87:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksimulation_loop\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.629821] (mujoco_sim_test) StderrLine: {'line': b'   87 |         std::bind(&MujocoSimNode::\x1b[01;31m\x1b[Ksimulation_loop\x1b[m\x1b[K, this));\n'}
+[1.629889] (mujoco_sim_test) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.629957] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:\x1b[m\x1b[K At global scope:\n'}
+[1.630025] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MujocoSimNode::simulation_loop()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.630094] (mujoco_sim_test) StderrLine: {'line': b'  103 | void \x1b[01;31m\x1b[KMujocoSimNode\x1b[m\x1b[K::simulation_loop()\n'}
+[1.630163] (mujoco_sim_test) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.630232] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MujocoSimNode::simulation_loop()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.630302] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.630370] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[1.630439] (mujoco_sim_test) StderrLine: {'line': b'   26 | class \x1b[01;36m\x1b[KMujocoSimNode\x1b[m\x1b[K// : public rclcpp::Node\n'}
+[1.630507] (mujoco_sim_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.705266] (-) TimerEvent: {}
+[1.805714] (-) TimerEvent: {}
+[1.906096] (-) TimerEvent: {}
+[1.999303] (mujoco_sim_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1\n'}
+[1.999731] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2\n'}
+[2.000001] (mujoco_sim_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[2.003119] (mujoco_sim_test) CommandEnded: {'returncode': 2}
+[2.006666] (-) TimerEvent: {}
+[2.059929] (mujoco_sim_test) JobEnded: {'identifier': 'mujoco_sim_test', 'rc': 2}
+[2.070333] (-) EventReactorShutdown: {}

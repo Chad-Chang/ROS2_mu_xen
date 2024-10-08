@@ -1,0 +1,19 @@
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:[m[K In constructor ‘[01m[KTestPublisher::TestPublisher()[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:23:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   23 |             1s,std::bind(&TestPublisher::publish_msg, this)[01;31m[K;[m[K
+      |                                                            [01;31m[K^[m[K
+      |                                                            [32m[K)[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:22:43:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   22 |         timer_ = this -> create_wall_timer[01;36m[K([m[K
+      |                                           [01;36m[K^[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:24:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   24 |         [01;31m[K)[m[K
+      |         [01;31m[K^[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:[m[K In member function ‘[01m[Kvoid TestPublisher::publish_msg()[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:29:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msg[m[K’ has not been declared
+   29 |         auto msg = [01;31m[Kstd_msg[m[K::msg::String();
+      |                    [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/publish_node.dir/build.make:63: CMakeFiles/publish_node.dir/src/publisher.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

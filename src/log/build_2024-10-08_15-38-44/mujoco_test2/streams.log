@@ -1,0 +1,52 @@
+[0.020s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[0.087s] [35m[1mScanning dependencies of target mujoco_node[0m
+[0.136s] [ 33%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/main.cpp.o[0m
+[1.641s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:[m[K In function ‘[01m[Kvoid mujoco::PhysicsLoop(Simulate&)[m[K’:
+[1.642s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:94:22:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[KSimulate[m[K’
+[1.642s]    94 |              if (sim [01;31m[K->[m[K m)
+[1.642s]       |                      [01;31m[K^~[m[K
+[1.643s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:102:25:[m[K [01;31m[Kerror: [m[K‘[01m[Km[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+[1.643s]   102 |                 mj_step([01;31m[Km[m[K, d);
+[1.644s]       |                         [01;31m[K^[m[K
+[1.644s]       |                         [32m[Ktm[m[K
+[1.645s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:102:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kd[m[K’ was not declared in this scope
+[1.645s]   102 |                 mj_step(m, [01;31m[Kd[m[K);
+[1.645s]       |                            [01;31m[K^[m[K
+[1.645s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:[m[K In function ‘[01m[Kvoid mujoco::PhysicsThread(Simulate*)[m[K’:
+[1.645s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:111:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Simulate[m[K’ has no member named ‘[01m[Km[m[K’; did you mean ‘[01m[KmjModel* Simulate::m_[m[K’? (not accessible from this context)
+[1.646s]   111 |     mj_forward(sim->[01;31m[Km[m[K, sim->d);
+[1.646s]       |                     [01;31m[K^[m[K
+[1.646s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:12[m[K:
+[1.646s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/include/sim.hpp:29:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+[1.646s]    29 |     mjModel* [01;36m[Km_[m[K = nullptr;         // MuJoCo 모델
+[1.646s]       |              [01;36m[K^~[m[K
+[1.646s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:111:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Simulate[m[K’ has no member named ‘[01m[Kd[m[K’; did you mean ‘[01m[KmjData* Simulate::d_[m[K’? (not accessible from this context)
+[1.646s]   111 |     mj_forward(sim->m, sim->[01;31m[Kd[m[K);
+[1.646s]       |                             [01;31m[K^[m[K
+[1.647s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:12[m[K:
+[1.647s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/include/sim.hpp:30:13:[m[K [01;36m[Knote: [m[Kdeclared private here
+[1.647s]    30 |     mjData* [01;36m[Kd_[m[K = nullptr;          // MuJoCo 데이터
+[1.647s]       |             [01;36m[K^~[m[K
+[1.647s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:116:5:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator~[m[K’ (operand type is ‘[01m[KSimulate[m[K’)
+[1.647s]   116 |     [01;31m[K~Simulate()[m[K;
+[1.647s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.733s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:7[m[K:
+[1.733s] /usr/include/c++/9/thread: In instantiation of ‘[01m[Kstd::thread::thread(_Callable&&, _Args&& ...) [with _Callable = void (*)(Simulate*); _Args = {Simulate*, std::nullptr_t}; <template-parameter-1-3> = void][m[K’:
+[1.733s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:128:79:[m[K   required from here
+[1.733s] [01m[K/usr/include/c++/9/thread:120:44:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: std::thread arguments must be invocable after conversion to rvalues
+[1.733s]   120 | y<_Args>::type...>::[01;31m[Kvalue[m[K,
+[1.734s]       |                     [01;31m[K^~~~~[m[K
+[1.734s] 
+[1.737s] /usr/include/c++/9/thread: In instantiation of ‘[01m[Kstruct std::thread::_Invoker<std::tuple<void (*)(Simulate*), Simulate*, std::nullptr_t> >[m[K’:
+[1.737s] [01m[K/usr/include/c++/9/thread:131:22:[m[K   required from ‘[01m[Kstd::thread::thread(_Callable&&, _Args&& ...) [with _Callable = void (*)(Simulate*); _Args = {Simulate*, std::nullptr_t}; <template-parameter-1-3> = void][m[K’
+[1.737s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/main.cpp:128:79:[m[K   required from here
+[1.738s] [01m[K/usr/include/c++/9/thread:243:4:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<void (*)(Simulate*), Simulate*, std::nullptr_t> >::__result<std::tuple<void (*)(Simulate*), Simulate*, std::nullptr_t> >[m[K’
+[1.738s]   243 |    [01;31m[K_M_invoke[m[K(_Index_tuple<_Ind...>)
+[1.738s]       |    [01;31m[K^~~~~~~~~[m[K
+[1.738s] [01m[K/usr/include/c++/9/thread:247:2:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<void (*)(Simulate*), Simulate*, std::nullptr_t> >::__result<std::tuple<void (*)(Simulate*), Simulate*, std::nullptr_t> >[m[K’
+[1.738s]   247 |  [01;31m[Koperator[m[K()()
+[1.738s]       |  [01;31m[K^~~~~~~~[m[K
+[2.023s] make[2]: *** [CMakeFiles/mujoco_node.dir/build.make:76: CMakeFiles/mujoco_node.dir/src/main.cpp.o] Error 1
+[2.023s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_node.dir/all] Error 2
+[2.023s] make: *** [Makefile:141: all] Error 2
+[2.027s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12

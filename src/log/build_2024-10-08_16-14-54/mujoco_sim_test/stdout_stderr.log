@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target mujoco_sim_node[0m
+[ 25%] [32m[1mLinking CXX executable publish_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 75%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+/usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o: in function `MujocoSimNode::MujocoSimNode()':
+mujoco2.cpp:(.text+0x11a): undefined reference to `MujocoSimNode::sim_node_instance_'
+/usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o: in function `MujocoSimNode::keyboard(GLFWwindow*, int, int, int, int)':
+mujoco2.cpp:(.text+0x591): undefined reference to `MujocoSimNode::sim_node_instance_'
+/usr/bin/ld: mujoco2.cpp:(.text+0x59c): undefined reference to `MujocoSimNode::sim_node_instance_'
+/usr/bin/ld: mujoco2.cpp:(.text+0x5b2): undefined reference to `MujocoSimNode::sim_node_instance_'
+/usr/bin/ld: mujoco2.cpp:(.text+0x5bd): undefined reference to `MujocoSimNode::sim_node_instance_'
+/usr/bin/ld: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o:mujoco2.cpp:(.text+0x603): more undefined references to `MujocoSimNode::sim_node_instance_' follow
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:148: mujoco_sim_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

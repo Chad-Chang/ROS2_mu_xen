@@ -1,0 +1,9 @@
+[0.019s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[0.121s] [ 50%] [32m[1mLinking CXX executable mujoco_node[0m
+[0.227s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.227s] (.text+0x24): undefined reference to `main'
+[0.227s] collect2: error: ld returned 1 exit status
+[0.230s] make[2]: *** [CMakeFiles/mujoco_node.dir/build.make:148: mujoco_node] Error 1
+[0.231s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_node.dir/all] Error 2
+[0.231s] make: *** [Makefile:141: all] Error 2
+[0.235s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12

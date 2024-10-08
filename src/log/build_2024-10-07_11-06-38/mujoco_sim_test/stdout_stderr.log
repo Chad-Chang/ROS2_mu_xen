@@ -1,0 +1,61 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found msg_srv_action_interface_example: 0.0.0 (/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/share/msg_srv_action_interface_example/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/chad/ros2_ws/src/mujoco_sim_test/include;/home/chad/ros2_ws/src/mujoco_sim_test/../../mujoco_3.1.6/include/
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/chad/ros2_ws/src/build/mujoco_sim_test
+[35m[1mScanning dependencies of target publish_node[0m
+[ 50%] Built target mujoco_sim_node
+[ 75%] [32mBuilding CXX object CMakeFiles/publish_node.dir/src/publisher.cpp.o[0m
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:34:24:[m[K [01;31m[Kerror: [m[K‘[01m[KsharedPtr[m[K’ in ‘[01m[Kclass rclcpp::TimerBase[m[K’ does not name a type
+   34 |     rclcpp::TimerBase::[01;31m[KsharedPtr[m[K timer_;
+      |                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:37:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   37 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:[m[K In constructor ‘[01m[KTestPublisher::TestPublisher()[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:19:36:[m[K [01;31m[Kerror: [m[K‘[01m[KQos[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[KQoS[m[K’?
+   19 |         auto qos_profile = rclcpp::[01;31m[KQos[m[K(rclcpp::KeepLast(10));
+      |                                    [01;31m[K^~~[m[K
+      |                                    [32m[KQoS[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:22:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   22 |         [01;31m[Ktimer_[m[K = this -> create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:23:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   23 |             1s,std::bind(&TestPublisher::publish_msg, this)[01;31m[K;[m[K
+      |                                                            [01;31m[K^[m[K
+      |                                                            [32m[K)[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:22:43:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   22 |         timer_ = this -> create_wall_timer[01;36m[K([m[K
+      |                                           [01;36m[K^[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:24:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   24 |         [01;31m[K)[m[K
+      |         [01;31m[K^[m[K
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:[m[K In member function ‘[01m[Kvoid TestPublisher::publish_msg()[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/publisher.cpp:29:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msg[m[K’ has not been declared
+   29 |         auto msg = [01;31m[Kstd_msg[m[K::msg::String();
+      |                    [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/publish_node.dir/build.make:63: CMakeFiles/publish_node.dir/src/publisher.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

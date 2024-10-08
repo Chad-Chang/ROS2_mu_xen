@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000639] (-) JobUnselected: {'identifier': 'msg_srv_action_interface_example'}
+[0.000742] (-) JobUnselected: {'identifier': 'mujoco_test2'}
+[0.000877] (mujoco_sim_test) JobQueued: {'identifier': 'mujoco_sim_test', 'dependencies': OrderedDict([('msg_srv_action_interface_example', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example')])}
+[0.000948] (mujoco_sim_test) JobStarted: {'identifier': 'mujoco_sim_test'}
+[0.018379] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'cmake'}
+[0.019999] (mujoco_sim_test) JobProgress: {'identifier': 'mujoco_sim_test', 'progress': 'build'}
+[0.021552] (mujoco_sim_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/chad/ros2_ws/src/build/mujoco_sim_test', '--', '-j12', '-l12'], 'cwd': '/home/chad/ros2_ws/src/build/mujoco_sim_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'chad'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1515'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/chad'), ('OLDPWD', '/home/chad/ros2_ws/src/install'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '182688'), ('_colcon_cd_root', '/home/chad/ros2_install'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/chad/ros2_ws/src/install:/home/chad/robot_ws_foxy/src/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'chad'), ('JOURNAL_STREAM', '8:46330'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/chad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/chad-Default-string:@/tmp/.ICE-unix/1562,unix/chad-Default-string:/tmp/.ICE-unix/1562'), ('INVOCATION_ID', 'd12776cb9bdc48f3b31d0fa7df03e5e0'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('TILIX_ID', '56a38bdb-a7e1-458a-ae62-75061756d5c0'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chad/ros2_ws/src/build/mujoco_sim_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy')]), 'shell': False}
+[0.099547] (-) TimerEvent: {}
+[0.123063] (mujoco_sim_test) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o\x1b[0m\n'}
+[0.123398] (mujoco_sim_test) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable publish_node\x1b[0m\n'}
+[0.199644] (-) TimerEvent: {}
+[0.220702] (mujoco_sim_test) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[0.221155] (mujoco_sim_test) StderrLine: {'line': b"(.text+0x24): undefined reference to `main'\n"}
+[0.221342] (mujoco_sim_test) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[0.223085] (mujoco_sim_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1\n'}
+[0.223701] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2\n'}
+[0.223970] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[0.299816] (-) TimerEvent: {}
+[0.400295] (-) TimerEvent: {}
+[0.500770] (-) TimerEvent: {}
+[0.601229] (-) TimerEvent: {}
+[0.701686] (-) TimerEvent: {}
+[0.802139] (-) TimerEvent: {}
+[0.902583] (-) TimerEvent: {}
+[1.003033] (-) TimerEvent: {}
+[1.103484] (-) TimerEvent: {}
+[1.203943] (-) TimerEvent: {}
+[1.304394] (-) TimerEvent: {}
+[1.404842] (-) TimerEvent: {}
+[1.505281] (-) TimerEvent: {}
+[1.549759] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:9:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.550184] (mujoco_sim_test) StderrLine: {'line': b'    9 | \x1b[01;31m\x1b[KMujocoSimNode\x1b[m\x1b[K::MujocoSimNode(const rclcpp::NodeOptions & node_options)\n'}
+[1.550361] (mujoco_sim_test) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.550551] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.550709] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidates are: \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode::MujocoSimNode(const MujocoSimNode&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.550883] (mujoco_sim_test) StderrLine: {'line': b'   26 | class \x1b[01;36m\x1b[KMujocoSimNode\x1b[m\x1b[K// : public rclcpp::Node\n'}
+[1.551050] (mujoco_sim_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.551200] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:36:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K                \xe2\x80\x98\x1b[01m\x1b[KMujocoSimNode::MujocoSimNode()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.551353] (mujoco_sim_test) StderrLine: {'line': b'   36 |     explicit \x1b[01;36m\x1b[KMujocoSimNode\x1b[m\x1b[K();//(const rclcpp::NodeOptions & node_options = rclcpp::NodeOptions());\n'}
+[1.551503] (mujoco_sim_test) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.551652] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[1.551813] (mujoco_sim_test) StderrLine: {'line': b'   26 | class \x1b[01;36m\x1b[KMujocoSimNode\x1b[m\x1b[K// : public rclcpp::Node\n'}
+[1.551962] (mujoco_sim_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.552112] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:123:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MujocoSimNode::simulation_loop()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.552266] (mujoco_sim_test) StderrLine: {'line': b'  123 | void \x1b[01;31m\x1b[KMujocoSimNode\x1b[m\x1b[K::simulation_loop()\n'}
+[1.552415] (mujoco_sim_test) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.552565] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:123:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MujocoSimNode::simulation_loop()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.552716] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.552864] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MujocoSimNode\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[1.553015] (mujoco_sim_test) StderrLine: {'line': b'   26 | class \x1b[01;36m\x1b[KMujocoSimNode\x1b[m\x1b[K// : public rclcpp::Node\n'}
+[1.553162] (mujoco_sim_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.554398] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.554680] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:282:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kspin(std::shared_ptr<MujocoSimNode>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.554799] (mujoco_sim_test) StderrLine: {'line': b'  282 |     rclcpp::spin(node\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[1.554923] (mujoco_sim_test) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.555043] (mujoco_sim_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.555145] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16\x1b[m\x1b[K,\n'}
+[1.555242] (mujoco_sim_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3\x1b[m\x1b[K:\n'}
+[1.555339] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.555437] (mujoco_sim_test) StderrLine: {'line': b'   45 | \x1b[01;36m\x1b[Kspin\x1b[m\x1b[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);\n'}
+[1.555534] (mujoco_sim_test) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.555630] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:60:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[KMujocoSimNode\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[Krclcpp::node_interfaces::NodeBaseInterface\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.555734] (mujoco_sim_test) StderrLine: {'line': b'   45 | spin(\x1b[01;36m\x1b[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr\x1b[m\x1b[K);\n'}
+[1.555831] (mujoco_sim_test) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[1.555937] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.556044] (mujoco_sim_test) StderrLine: {'line': b'   49 | \x1b[01;36m\x1b[Kspin\x1b[m\x1b[K(rclcpp::Node::SharedPtr node_ptr);\n'}
+[1.556143] (mujoco_sim_test) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.556241] (mujoco_sim_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[KMujocoSimNode\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[Krclcpp::Node\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.556350] (mujoco_sim_test) StderrLine: {'line': b'   49 | spin(\x1b[01;36m\x1b[Krclcpp::Node::SharedPtr node_ptr\x1b[m\x1b[K);\n'}
+[1.556447] (mujoco_sim_test) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[1.605433] (-) TimerEvent: {}
+[1.705903] (-) TimerEvent: {}
+[1.806382] (-) TimerEvent: {}
+[1.906883] (-) TimerEvent: {}
+[1.938907] (mujoco_sim_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1\n'}
+[1.939280] (mujoco_sim_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2\n'}
+[1.939712] (mujoco_sim_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[1.943587] (mujoco_sim_test) CommandEnded: {'returncode': 2}
+[1.999711] (mujoco_sim_test) JobEnded: {'identifier': 'mujoco_sim_test', 'rc': 2}
+[2.006970] (-) TimerEvent: {}
+[2.010222] (-) EventReactorShutdown: {}

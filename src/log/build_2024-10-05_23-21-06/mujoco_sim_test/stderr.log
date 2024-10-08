@@ -1,0 +1,8 @@
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:73:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktest_subscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_subscribers[m[K’?
+   73 |     [01;31m[Ktest_subscriber_[m[K = this -> create_subscription<ArithmeticArgument>( // subscription callback
+      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |     [32m[Kcount_subscribers[m[K
+make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

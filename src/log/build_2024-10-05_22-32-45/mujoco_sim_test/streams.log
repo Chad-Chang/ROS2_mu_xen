@@ -1,0 +1,10 @@
+[0.016s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.048s] CMake Error at CMakeLists.txt:37:
+[0.048s]   Parse error.  Function missing ending ")".  End of file reached.
+[0.049s] 
+[0.049s] 
+[0.049s] -- Configuring incomplete, errors occurred!
+[0.049s] See also "/home/chad/ros2_ws/src/build/mujoco_sim_test/CMakeFiles/CMakeOutput.log".
+[0.049s] See also "/home/chad/ros2_ws/src/build/mujoco_sim_test/CMakeFiles/CMakeError.log".
+[0.050s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.053s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

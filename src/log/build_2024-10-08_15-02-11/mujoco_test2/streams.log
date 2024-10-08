@@ -1,0 +1,11 @@
+[0.018s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[0.080s] [35m[1mScanning dependencies of target mujoco_node[0m
+[0.094s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/sim.cpp.o[0m
+[0.107s] [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/sim.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ksim.hpp: No such file or directory
+[0.107s]     2 | #include [01;31m[K"sim.hpp"[m[K
+[0.107s]       |          [01;31m[K^~~~~~~~~[m[K
+[0.107s] compilation terminated.
+[0.108s] make[2]: *** [CMakeFiles/mujoco_node.dir/build.make:63: CMakeFiles/mujoco_node.dir/src/sim.cpp.o] Error 1
+[0.108s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_node.dir/all] Error 2
+[0.109s] make: *** [Makefile:141: all] Error 2
+[0.112s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12

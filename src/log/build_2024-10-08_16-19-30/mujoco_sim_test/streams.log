@@ -1,0 +1,14 @@
+[0.025s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.095s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.128s] [ 25%] [32m[1mLinking CXX executable publish_node[0m
+[0.141s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[0.225s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.226s] (.text+0x24): undefined reference to `main'
+[0.226s] collect2: error: ld returned 1 exit status
+[0.227s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[0.228s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[0.228s] make[1]: *** Waiting for unfinished jobs....
+[5.436s] [ 75%] [32m[1mLinking CXX executable mujoco_sim_node[0m
+[5.700s] [ 75%] Built target mujoco_sim_node
+[5.701s] make: *** [Makefile:141: all] Error 2
+[5.705s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

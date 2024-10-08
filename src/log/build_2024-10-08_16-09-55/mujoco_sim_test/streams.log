@@ -1,0 +1,76 @@
+[0.023s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.095s] [35m[1mScanning dependencies of target publish_node[0m
+[0.095s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.128s] [ 25%] [32mBuilding CXX object CMakeFiles/publish_node.dir/src/publisher.cpp.o[0m
+[0.140s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[1.560s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.560s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:21:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+[1.560s]    26 | class MujocoSimNode([01;31m[K)[m[K// : public rclcpp::Node
+[1.560s]       |                     [01;31m[K^[m[K
+[1.560s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:7:31:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.561s]     7 | MujocoSimNode* MujocoSimNode::[01;31m[Ksim_node_instance_[m[K = nullptr;
+[1.561s]       |                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.561s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.561s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.561s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.561s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.562s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:9:70:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.562s]     9 | MujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions & node_options[01;31m[K)[m[K
+[1.562s]       |                                                                      [01;31m[K^[m[K
+[1.562s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.562s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.562s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.563s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.563s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:93:31:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.563s]    93 | MujocoSimNode::~MujocoSimNode([01;31m[K)[m[K
+[1.563s]       |                               [01;31m[K^[m[K
+[1.563s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.563s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.564s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.564s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.564s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:37:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.564s]   103 | void MujocoSimNode::simulation_loop([01;31m[K)[m[K
+[1.564s]       |                                     [01;31m[K^[m[K
+[1.564s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.565s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.565s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.565s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.565s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:130:90:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.565s]   130 | void MujocoSimNode::keyboard(GLFWwindow* window, int key, int scancode, int act, int mods[01;31m[K)[m[K
+[1.565s]       |                                                                                          [01;31m[K^[m[K
+[1.565s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.566s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.566s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.566s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.566s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:142:83:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.566s]   142 | void MujocoSimNode::mouse_button(GLFWwindow* window, int button, int act, int mods[01;31m[K)[m[K
+[1.567s]       |                                                                                   [01;31m[K^[m[K
+[1.567s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.567s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.567s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.567s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.567s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:155:76:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.567s]   155 | void MujocoSimNode::mouse_move(GLFWwindow* window, double xpos, double ypos[01;31m[K)[m[K
+[1.568s]       |                                                                            [01;31m[K^[m[K
+[1.568s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.568s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.568s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.568s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.568s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:186:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass MujocoSimNode[m[K’
+[1.569s]   186 | void MujocoSimNode::scroll(GLFWwindow* window, double xoffset, double yoffset[01;31m[K)[m[K
+[1.569s]       |                                                                              [01;31m[K^[m[K
+[1.569s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.569s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass MujocoSimNode[m[K’
+[1.569s]    26 | class [01;36m[KMujocoSimNode[m[K()// : public rclcpp::Node
+[1.569s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.935s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+[1.936s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[1.936s] make[1]: *** Waiting for unfinished jobs....
+[2.133s] [ 75%] [32m[1mLinking CXX executable publish_node[0m
+[2.227s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.227s] (.text+0x24): undefined reference to `main'
+[2.227s] collect2: error: ld returned 1 exit status
+[2.230s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[2.230s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[2.231s] make: *** [Makefile:141: all] Error 2
+[2.235s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

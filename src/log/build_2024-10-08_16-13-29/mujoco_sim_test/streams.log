@@ -1,0 +1,92 @@
+[0.023s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.086s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.116s] [ 25%] [32m[1mLinking CXX executable publish_node[0m
+[0.130s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[0.210s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.210s] (.text+0x24): undefined reference to `main'
+[0.211s] collect2: error: ld returned 1 exit status
+[0.213s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[0.213s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[0.213s] make[1]: *** Waiting for unfinished jobs....
+[1.599s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[1.599s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.600s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.601s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.601s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.601s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16[m[K,
+[1.601s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.601s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In constructor ‘[01m[KMujocoSimNode::MujocoSimNode()[m[K’:
+[1.601s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MujocoSimNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[1.601s]    39 |         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "MuJoCo model load error: %s", error);
+[1.602s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[1.602s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MujocoSimNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[1.602s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.602s]    39 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "MuJoCo model load error: %s", error);
+[1.602s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.603s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.603s]    39 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "MuJoCo model load error: %s", error);
+[1.603s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.603s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.603s]    39 |         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "MuJoCo model load error: %s", error);
+[1.604s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[1.604s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.604s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.604s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.604s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.604s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.605s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.605s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.605s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.605s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.605s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.605s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16[m[K,
+[1.606s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.606s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MujocoSimNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[1.606s]    39 |         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "MuJoCo model load error: %s", error);
+[1.606s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[1.606s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:39:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MujocoSimNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[1.606s]    39 |         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "MuJoCo model load error: %s", error);
+[1.606s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[1.606s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:106:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MujocoSimNode[m[K’ has no member named ‘[01m[Kcreate_wall_timer[m[K’
+[1.606s]   106 |     timer_ = this->[01;31m[Kcreate_wall_timer[m[K(
+[1.607s]       |                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.607s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:108:35:[m[K [01;31m[Kerror: [m[K‘[01m[Ksimulation_loop[m[K’ is not a member of ‘[01m[KMujocoSimNode[m[K’
+[1.607s]   108 |         std::bind(&MujocoSimNode::[01;31m[Ksimulation_loop[m[K, this));
+[1.607s]       |                                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.607s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K At global scope:
+[1.607s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:124:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’
+[1.607s]   124 | void [01;31m[KMujocoSimNode[m[K::simulation_loop()
+[1.607s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[1.608s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:124:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’
+[1.608s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.608s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MujocoSimNode[m[K’ defined here
+[1.608s]    26 | class [01;36m[KMujocoSimNode[m[K// : public rclcpp::Node
+[1.608s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.608s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.608s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:283:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(std::shared_ptr<MujocoSimNode>&)[m[K’
+[1.608s]   283 |     rclcpp::spin(node[01;31m[K)[m[K;
+[1.608s]       |                      [01;31m[K^[m[K
+[1.609s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.609s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:16[m[K,
+[1.609s]                  from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.609s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[1.609s]    45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[1.609s]       | [01;36m[K^~~~[m[K
+[1.609s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KMujocoSimNode[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::node_interfaces::NodeBaseInterface[m[K>[m[K’
+[1.609s]    45 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+[1.609s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.610s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+[1.610s]    49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[1.610s]       | [01;36m[K^~~~[m[K
+[1.610s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KMujocoSimNode[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Node[m[K>[m[K’
+[1.610s]    49 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+[1.610s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.987s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+[1.987s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[1.987s] make: *** [Makefile:141: all] Error 2
+[1.992s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

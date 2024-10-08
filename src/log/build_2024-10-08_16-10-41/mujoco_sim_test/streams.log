@@ -1,0 +1,35 @@
+[0.025s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_sim_test': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12
+[0.090s] [35m[1mScanning dependencies of target mujoco_sim_node[0m
+[0.120s] [ 25%] [32m[1mLinking CXX executable publish_node[0m
+[0.129s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o[0m
+[0.215s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.216s] (.text+0x24): undefined reference to `main'
+[0.216s] collect2: error: ld returned 1 exit status
+[0.217s] make[2]: *** [CMakeFiles/publish_node.dir/build.make:131: publish_node] Error 1
+[0.218s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/publish_node.dir/all] Error 2
+[0.218s] make[1]: *** Waiting for unfinished jobs....
+[1.597s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:9:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[KMujocoSimNode::MujocoSimNode(const rclcpp::NodeOptions&)[m[K’
+[1.597s]     9 | [01;31m[KMujocoSimNode[m[K::MujocoSimNode(const rclcpp::NodeOptions & node_options)
+[1.597s]       | [01;31m[K^~~~~~~~~~~~~[m[K
+[1.598s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.598s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[Kcandidates are: ‘[01m[KMujocoSimNode::MujocoSimNode(const MujocoSimNode&)[m[K’
+[1.598s]    26 | class [01;36m[KMujocoSimNode[m[K// : public rclcpp::Node
+[1.598s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.598s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:36:14:[m[K [01;36m[Knote: [m[K                ‘[01m[KMujocoSimNode::MujocoSimNode()[m[K’
+[1.598s]    36 |     explicit [01;36m[KMujocoSimNode[m[K();//(const rclcpp::NodeOptions & node_options = rclcpp::NodeOptions());
+[1.599s]       |              [01;36m[K^~~~~~~~~~~~~[m[K
+[1.599s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MujocoSimNode[m[K’ defined here
+[1.599s]    26 | class [01;36m[KMujocoSimNode[m[K// : public rclcpp::Node
+[1.599s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.599s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’
+[1.599s]   103 | void [01;31m[KMujocoSimNode[m[K::simulation_loop()
+[1.600s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[1.600s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:103:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MujocoSimNode::simulation_loop()[m[K’
+[1.600s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/src/mujoco2.cpp:3[m[K:
+[1.600s] [01m[K/home/chad/ros2_ws/src/mujoco_sim_test/include/mujoco2.hpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MujocoSimNode[m[K’ defined here
+[1.600s]    26 | class [01;36m[KMujocoSimNode[m[K// : public rclcpp::Node
+[1.600s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[1.964s] make[2]: *** [CMakeFiles/mujoco_sim_node.dir/build.make:63: CMakeFiles/mujoco_sim_node.dir/src/mujoco2.cpp.o] Error 1
+[1.964s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/mujoco_sim_node.dir/all] Error 2
+[1.965s] make: *** [Makefile:141: all] Error 2
+[1.969s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_sim_test' returned '2': CMAKE_PREFIX_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_test2:/home/chad/robot_ws_foxy/src/install/topic_service_action_rclcpp_example:/home/chad/robot_ws_foxy/src/install/my_first_ros_rclcpp_pkg:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example:/home/chad/ros2_ws/src/install/mujoco_sim_test:/opt/ros/foxy LD_LIBRARY_PATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/chad/ros2_ws/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/home/chad/robot_ws_foxy/src/install/msg_srv_action_interface_example/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_sim_test -- -j12 -l12

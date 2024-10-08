@@ -1,0 +1,11 @@
+[0.016s] Invoking command in '/home/chad/ros2_ws/src/build/mujoco_test2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12
+[0.081s] [35m[1mScanning dependencies of target mujoco_node[0m
+[0.126s] [ 50%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/sim.cpp.o[0m
+[1.578s] In file included from [01m[K/home/chad/ros2_ws/src/mujoco_test2/src/sim.cpp:6[m[K:
+[1.578s] [01m[K/usr/include/c++/9/cstring:71:8:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before string constant
+[1.579s]    71 | extern [01;31m[K"C++"[m[K
+[1.579s]       |        [01;31m[K^~~~~[m[K
+[1.963s] make[2]: *** [CMakeFiles/mujoco_node.dir/build.make:63: CMakeFiles/mujoco_node.dir/src/sim.cpp.o] Error 1
+[1.963s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/mujoco_node.dir/all] Error 2
+[1.963s] make: *** [Makefile:141: all] Error 2
+[1.967s] Invoked command in '/home/chad/ros2_ws/src/build/mujoco_test2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/chad/ros2_ws/src/build/mujoco_test2 -- -j12 -l12

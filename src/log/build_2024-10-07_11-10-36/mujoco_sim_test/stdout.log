@@ -1,0 +1,3 @@
+[35m[1mScanning dependencies of target publish_node[0m
+[ 50%] Built target mujoco_sim_node
+[ 75%] [32mBuilding CXX object CMakeFiles/publish_node.dir/src/publisher.cpp.o[0m

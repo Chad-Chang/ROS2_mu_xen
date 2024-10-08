@@ -1,0 +1,3 @@
+[35m[1mScanning dependencies of target mujoco_node[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/sim.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/mujoco_node.dir/src/main.cpp.o[0m
