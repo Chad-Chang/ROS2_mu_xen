@@ -1,18 +1,3 @@
-# Spot MuJoCo ROS2
-
-<div align="center">
-    <img src="./results.png">
-</div>
-
-## Introduction
-
-This package is developed with [ROS2](https://docs.ros.org/en/humble/index.html) based on [spot-sdk](https://github.com/boston-dynamics/spot-sdk). The original [urdf](https://github.com/boston-dynamics/spot-sdk/tree/master/files) has no inertia and mass information, so we generate this information based on its geometric shape.
-
-The files include:
-
-1. The XML file `(description/model/xml/spot_mini/spot_mini.xml)` of [Spot Mini](https://www.bostondynamics.com/products/spot) for the simulation in [MuJoCo](https://mujoco.org/).
-2. A class named `MuJoCoMessageHandler` is also provided, which publishes the robot joint state and imu message. The `odom` message is just the real pose of the robot in simulation. More details can be found in the cpp file `src/simulation/mujoco/src/MuJoCoMessageHandler.cpp`.
-3. ROS2 ([version](https://docs.ros.org/en/humble/index.html)) is needed to run this package.
 
 ## Installation
 
