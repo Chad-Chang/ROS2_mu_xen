@@ -20,13 +20,18 @@ find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 file(GLOB_RECURSE source ${CMAKE_CURRENT_SOURCE_DIR}/msg/* ${CMAKE_CURRENT_SOURCE_DIR}/srv/* )
 rosidl_generate_interfaces(${PROJECT_NAME}
-        msg/ActuatorCmds.msg
-        msg/MotionCommands.msg
-        msg/TouchSensor.msg
+        msg/ActuatorCmds.msg  # will not use
+        msg/MotionCommands.msg # will not use
+        msg/TouchSensor.msg # will not use
+
+	msg/MclActuator.msg
+        msg/MclImu.msg
+       
         srv/SimulationReset.srv
         srv/GaitSwitch.srv
         DEPENDENCIES ament_cmake std_msgs geometry_msgs sensor_msgs 

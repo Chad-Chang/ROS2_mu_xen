@@ -52,3 +52,12 @@ Now your can open a new terminal and use command `ros2 topic list` to see the be
 
 ```
 
+
+## 파일 설명 
+
+1. communication : msg, srv, action 정의 
+2. core : 
+3. description : 모델 xml정의 
+4. real_robot : xenomai 쓰레드 기반 elmo contorller
+5. simulation : mujoco simulation node : msghandler thread, simulation thread로 이루어짐.
+6. common_node : kinematics/Dynamics/Control/logging/trajectory/optimization(online)...

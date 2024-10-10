@@ -10,6 +10,7 @@ MuJoCoMessageHandler::MuJoCoMessageHandler(mj::Simulate *sim)
   model_param_name = name_prefix + "model_file";
   this->declare_parameter(model_param_name, "");
 
+
   reset_service_ = this->create_service<communication::srv::SimulationReset>(
       name_prefix + "sim_reset",
       std::bind(&MuJoCoMessageHandler::reset_callback, this,
@@ -41,9 +42,9 @@ MuJoCoMessageHandler::MuJoCoMessageHandler(mj::Simulate *sim)
       20ms, std::bind(&MuJoCoMessageHandler::img_callback, this)));
   timers_.emplace_back(this->create_wall_timer(
       100ms, std::bind(&MuJoCoMessageHandler::drop_old_message, this)));
-  /* timers_.emplace_back(this->create_wall_timer(
-      4s, std::bind(&MuJoCoMessageHandler::throw_box, this)));
- */
+  //  timers_.emplace_back(this->create_wall_timer(
+  //     4s, std::bind(&MuJoCoMessageHandler::throw_box, this)));
+ 
   actuator_cmd_subscription_ =
       this->create_subscription<communication::msg::ActuatorCmds>(
           name_prefix + "actuators_cmds", qos,
@@ -124,10 +125,13 @@ void MuJoCoMessageHandler::reset_callback(
 void MuJoCoMessageHandler::imu_callback() {
   if (sim_->d != nullptr) {
     auto message = sensor_msgs::msg::Imu();
-    message.header.frame_id = &sim_->m->names[0];
+    
+    message.header.frame_id = &sim_->m->names[0]; // quadMCL_scene  : 파일 이름이 출력되네?
+    
     message.header.stamp = rclcpp::Clock().now();
+    
     const std::lock_guard<std::mutex> lock(sim_->mtx);
-
+  
     for (int i = 0; i < sim_->m->nsensor; i++) {
       if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_ACCELEROMETER) {
         message.linear_acceleration.x =
@@ -164,7 +168,9 @@ void MuJoCoMessageHandler::touch_callback() {
     std::vector<std::string> tourch_sensors = {"fl_touch", "fr_touch",
                                                "hl_touch", "hr_touch"};
     for (auto &name : tourch_sensors) {
-      int idx = mj_name2id(sim_->m, mjOBJ_SENSOR, name.c_str());
+      // using model name -> find id
+      int idx = mj_name2id(sim_->m, mjOBJ_SENSOR, name.c_str()); // string to char
+      // RCLCPP_INFO(this->get_logger(), "id = %d , string = %s", idx, name.c_str());
       if (idx > -1) {
         message.value.emplace_back(
             sim_->d->sensordata[sim_->m->sensor_adr[idx]]);
@@ -260,7 +266,7 @@ void MuJoCoMessageHandler::actuator_cmd_callback(
 }
 
 void MuJoCoMessageHandler::parameter_callback(const rclcpp::Parameter &) {
-  std::string model_file = this->get_parameter(model_param_name)
+  std::string model_file = this->get_parameter(model_param_name) // 
                                .get_parameter_value()
                                .get<std::string>();
   RCLCPP_INFO(this->get_logger(), "load model from: %s", model_file.c_str());
@@ -280,63 +286,75 @@ void MuJoCoMessageHandler::drop_old_message() {
   }
 }
 
-void MuJoCoMessageHandler::throw_box() {
-  const std::lock_guard<std::mutex> lock(sim_->mtx);
-  int nq = sim_->m->nq - 1;
-  int nv = sim_->m->nv - 1;
-  int nq_shift = 0;
-  int nv_shift = 0;
+// void MuJoCoMessageHandler::throw_box() {
+//   const std::lock_guard<std::mutex> lock(sim_->mtx);
+//   int nq = sim_->m->nq - 1;
+//   int nv = sim_->m->nv - 1;
+//   int nq_shift = 0;
+//   int nv_shift = 0;
 
-  if (sim_->d->time < 5.0) {
-    return;
-  }
-  for (int i = 0; i < 4; i++) {
-    std::vector<mjtNum> pos;
-    std::vector<mjtNum> vel;
+//   if (sim_->d->time < 5.0) {
+//     return;
+//   }
+//   for (int i = 0; i < 4; i++) {
+//     std::vector<mjtNum> pos;
+//     std::vector<mjtNum> vel;
 
-    switch (i) {
-    case 0:
-      pos = {0.45, 0, 0.5};
-      vel = {0, 0, -1.5};
-      break;
+//     switch (i) {
+//     case 0:
+//       pos = {0.45, 0, 0.5};
+int main(int argc, const int **argv[])
+{
+    rclcpp::init(argc,argv);
+    std::cout << "main" <<std::endl;
 
-    case 1:
-      pos = {0.15, -0.5, 0.2};
-      vel = {0, 2.5, 0};
-      break;
-
-    case 2:
-      pos = {-0.15, 0.5, 0.2};
-      vel = {0, -2.5, 0};
-      break;
-
-    case 3:
-      pos = {0.5, 0.5, 0.5};
-      vel = {-2.0, -2.0, -2.0};
-      break;
-
-    default:
-      break;
-    }
-    sim_->d->qpos[nq - nq_shift] = 0;
-    sim_->d->qpos[nq - 1 - nq_shift] = 0;
-    sim_->d->qpos[nq - 2 - nq_shift] = 0;
-    sim_->d->qpos[nq - 3 - nq_shift] = 1;
-    sim_->d->qpos[nq - 4 - nq_shift] = sim_->d->qpos[2] + pos[2];
-    sim_->d->qpos[nq - 5 - nq_shift] = sim_->d->qpos[1] + pos[1];
-    sim_->d->qpos[nq - 6 - nq_shift] = sim_->d->qpos[0] + pos[0];
-
-    sim_->d->qvel[nv - nv_shift] = 0;
-    sim_->d->qvel[nv - 1 - nv_shift] = 0;
-    sim_->d->qvel[nv - 2 - nv_shift] = 0;
-    sim_->d->qvel[nv - 3 - nv_shift] = sim_->d->qvel[2] + vel[2];
-    sim_->d->qvel[nv - 4 - nv_shift] = sim_->d->qvel[1] + vel[1];
-    sim_->d->qvel[nv - 5 - nv_shift] = sim_->d->qvel[0] + vel[0];
-
-    nq_shift += 7;
-    nv_shift += 6;
-  }
 }
+//       vel = {0, 0, -1.5};
+//       break;
+
+//     case 1:
+int main(int argc, const int **argv[])
+{
+    rclcpp::init(argc,argv);
+    std::cout << "main" <<std::endl;
+
+}
+//       pos = {0.15, -0.5, 0.2};
+//       vel = {0, 2.5, 0};
+//       break;
+
+//     case 2:
+//       pos = {-0.15, 0.5, 0.2};
+//       vel = {0, -2.5, 0};
+//       break;
+
+//     case 3:
+//       pos = {0.5, 0.5, 0.5};
+//       vel = {-2.0, -2.0, -2.0};
+//       break;
+
+//     default:
+//       break;
+//     }
+//     sim_->d->qpos[nq - nq_shift] = 0;
+//     sim_->d->qpos[nq - 1 - nq_shift] = 0;
+//     sim_->d->qpos[nq - 2 - nq_shift] = 0;
+//     sim_->d->qpos[nq - 3 - nq_shift] = 1;
+//     sim_->d->qpos[nq - 4 - nq_shift] = sim_->d->qpos[2] + pos[2];
+//     sim_->d->qpos[nq - 5 - nq_shift] = sim_->d->qpos[1] + pos[1];
+//     sim_->d->qpos[nq - 6 - nq_shift] = sim_->d->qpos[0] + pos[0];
+
+//     sim_->d->qvel[nv - nv_shift] = 0;
+//     sim_->d->qvel[nv - 1 - nv_shift] = 0;
+//     sim_->d->qvel[nv - 2 - nv_shift] = 0;
+//     sim_->d->qvel[nv - 3 - nv_shift] = sim_->d->qvel[2] + vel[2];
+//     sim_->d->qvel[nv - 4 - nv_shift] = sim_->d->qvel[1] + vel[1];
+//     sim_->d->qvel[nv - 5 - nv_shift] = sim_->d->qvel[0] + vel[0];
+
+//     nq_shift += 7;
+//     nv_shift += 6;
+//   }
+// }
 
 std::shared_ptr<MuJoCoMessageHandler::ActuatorCmds>
 MuJoCoMessageHandler::get_actuator_cmds_ptr() {

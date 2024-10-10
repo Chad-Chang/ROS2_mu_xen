@@ -14,6 +14,7 @@
 #include "communication/msg/touch_sensor.hpp"
 #include "communication/srv/simulation_reset.hpp"
 
+
 #include "array_safety.h"
 #include "simulate.h"
 
@@ -22,8 +23,8 @@ using namespace rclcpp;
 using namespace std::chrono_literals;
 
 namespace deepbreak {
-namespace mj = ::mujoco;
-namespace mju = ::mujoco::sample_util;
+  namespace mj = ::mujoco;
+  namespace mju = ::mujoco::sample_util;
 
 class MuJoCoMessageHandler : public rclcpp::Node {
 public:
@@ -58,15 +59,15 @@ private:
   void img_callback();
 
   void actuator_cmd_callback(
-      const communication::msg::ActuatorCmds::SharedPtr msg) const;
+      const communication::msg::ActuatorCmds::SharedPtr msg) const; // 보증을 의미함.
 
   void parameter_callback(const rclcpp::Parameter &);
 
   void drop_old_message();
 
-  void throw_box();
+  // void throw_box();
 
-  mj::Simulate *sim_;
+  mj::Simulate *sim_; // fixed pointer 
   std::string name_prefix, model_param_name;
   std::vector<rclcpp::TimerBase::SharedPtr> timers_;
   rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_publisher_;
@@ -74,6 +75,7 @@ private:
       joint_state_publisher_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_publisher_;
   rclcpp::Publisher<communication::msg::TouchSensor>::SharedPtr touch_publisher_;
+
   Publisher<sensor_msgs::msg::Image>::SharedPtr depth_img_publisher_ptr_;
   Publisher<sensor_msgs::msg::Image>::SharedPtr rgb_img_publisher_ptr_;
 
@@ -87,7 +89,7 @@ private:
 
   std::shared_ptr<ActuatorCmds> actuator_cmds_ptr_;
 
-  std::thread spin_thread;
+  // std::thread spin_thread;
 };
 
 } // namespace deepbreak

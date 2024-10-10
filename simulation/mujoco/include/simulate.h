@@ -33,7 +33,7 @@ namespace mujoco {
 // Simulate states not contained in MuJoCo structures
 class Simulate {
  public:
-  using Clock = std::chrono::steady_clock;
+  using Clock = std::chrono::steady_clock; //
   static_assert(std::ratio_less_equal_v<Clock::period, std::milli>);
 
   // create object and initialize the simulate ui

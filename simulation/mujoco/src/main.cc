@@ -205,7 +205,7 @@ void scanPluginLibraries() {
 //------------------------------------------- simulation
 //-------------------------------------------
 
-mjModel *LoadModel(const char *file, mj::Simulate &sim) {
+mjModel *LoadModel(const char *file, mj::Simulate &sim) {  // 새로운 모델을 로드할때 , 만약 모델이 있을때, 없을때 
   // this copy is needed so that the mju::strlen call below compiles
   char filename[mj::Simulate::kMaxFilenameLength];
   mju::strcpy_arr(filename, file);
@@ -258,10 +258,13 @@ mjModel *LoadModel(const char *file, mj::Simulate &sim) {
   return mnew;
 }
 
-void apply_ctrl(mjModel *m, mjData *d) {
+void apply_ctrl(mjModel *m, mjData *d) { // actuator ID 받아오고
+  //  communication에 정의된 msg ActuatorCmds임. => 이거 수정해야헸네
+  d-> qpos[10] = 1;
   for (size_t k = 0; k < actuator_cmds_ptr->actuators_name.size(); k++) {
+    
     int actuator_id = mj_name2id(m, mjOBJ_ACTUATOR,
-                                 actuator_cmds_ptr->actuators_name[k].c_str());
+                                 actuator_cmds_ptr->actuators_name[k].c_str()); // int mn_name2id(const mjModel* m, int type, const char* name);
     if (actuator_id == -1) {
       RCLCPP_INFO(rclcpp::get_logger("MuJoCo"),
                   "not found the name from the received message in mujoco");
@@ -273,7 +276,11 @@ void apply_ctrl(mjModel *m, mjData *d) {
     int vel_sensor_id =
         mj_name2id(m, mjOBJ_SENSOR,
                    (actuator_cmds_ptr->actuators_name[k] + "_vel").c_str());
+    
+    
+    
 
+    // PD제어기
     d->ctrl[actuator_id] = actuator_cmds_ptr->kp[k] *
                                (actuator_cmds_ptr->pos[k] -
                                 d->sensordata[m->sensor_adr[pos_sensor_id]]) +
@@ -281,6 +288,8 @@ void apply_ctrl(mjModel *m, mjData *d) {
                                (actuator_cmds_ptr->vel[k] -
                                 d->sensordata[m->sensor_adr[vel_sensor_id]]) +
                            actuator_cmds_ptr->torque[k];
+
+                      
     d->ctrl[actuator_id] =
         std::min(std::max(-100.0, d->ctrl[actuator_id]), 100.0);
   }
@@ -297,37 +306,38 @@ void PhysicsLoop(mj::Simulate &sim) {
     if (!rclcpp::ok()) {
       sim.exitrequest.store(true);
     }
-    if (sim.droploadrequest.load()) {
-      mjModel *mnew = LoadModel(sim.dropfilename, sim);
-      sim.droploadrequest.store(false);
+    // if (sim.droploadrequest.load()) {
+    //   mjModel *mnew = LoadModel(sim.dropfilename, sim);
+    //   sim.droploadrequest.store(false);
 
-      mjData *dnew = nullptr;
-      if (mnew)
-        dnew = mj_makeData(mnew);
-      if (dnew) {
-        sim.load(sim.dropfilename, mnew, dnew);
+    //   mjData *dnew = nullptr;
+    //   if (mnew)
+    //     dnew = mj_makeData(mnew);
+    //   if (dnew) {
+    //     sim.load(sim.dropfilename, mnew, dnew);
 
-        mj_deleteData(d);
-        mj_deleteModel(m);
+    //     mj_deleteData(d);
+    //     mj_deleteModel(m);
 
-        m = mnew;
-        d = dnew;
-        mj_forward(m, d);
+    //     m = mnew;
+    //     d = dnew;
+    //     mj_forward(m, d);
 
-        // allocate ctrlnoise
-        free(ctrlnoise);
-        ctrlnoise = (mjtNum *)malloc(sizeof(mjtNum) * m->nu);
-        mju_zero(ctrlnoise, m->nu);
-      }
-    }
+    //     // allocate ctrlnoise
+    //     free(ctrlnoise);
+    //     ctrlnoise = (mjtNum *)malloc(sizeof(mjtNum) * m->nu);
+    //     mju_zero(ctrlnoise, m->nu);
+    //   }
+    // }
 
-    if (sim.uiloadrequest.load()) {
+    if (sim.uiloadrequest.load()) { // ui가 sim에서 load가 되었다면
       sim.uiloadrequest.fetch_sub(1);
-      mjModel *mnew = LoadModel(sim.filename, sim);
+       //sim data file -> 실제 simulation 랜더링 파일
+      mjModel *mnew = LoadModel(sim.filename, sim); // 실제 시뮬레이션에서 렌더링 하는 모델을 로드함. :
       mjData *dnew = nullptr;
       if (mnew)
-        dnew = mj_makeData(mnew);
-      if (dnew) {
+        dnew = mj_makeData(mnew); // model이 로드가 잘 됬다면 dnew로 model의 정보를 가져오기
+      if (dnew) {  //dnew로 모델 정보 잘 가져왔다면 sim instance에 
         sim.load(sim.filename, mnew, dnew);
 
         mj_deleteData(d);
@@ -347,7 +357,7 @@ void PhysicsLoop(mj::Simulate &sim) {
     // sleep for 1 ms or yield, to let main thread run
     //  yield results in busy wait - which has better timing but kills battery
     //  life
-    if (sim.run && sim.busywait) {
+    if (sim.run && sim.busywait) {  // thread가 busy일때 시뮬레이션 thread를 잠시 쉬어줌.
       std::this_thread::yield();
     } else {
       std::this_thread::sleep_for(std::chrono::milliseconds(1));
@@ -358,15 +368,15 @@ void PhysicsLoop(mj::Simulate &sim) {
       const std::lock_guard<std::mutex> lock(sim.mtx);
 
       // run only if model is present
-      if (m) {
+      if (m) {          // 모델이 로드되고 시뮬레이션을 돌리라고 하면
         // running
         if (sim.run) {
-          // record cpu time at start of iteration
-          const auto startCPU = mj::Simulate::Clock::now();
+          // record cpu time at start of iteration : 마지막 cpu 부팅시간 
+          const auto startCPU = mj::Simulate::Clock::now(); // clock이라는 클래스의 static 함수
 
           // elapsed CPU and simulation time since last sync
           const auto elapsedCPU = startCPU - syncCPU;
-          double elapsedSim = d->time - syncSim;
+          double elapsedSim = d->time - syncSim; // 
 
           // inject noise
           if (sim.ctrlnoisestd) {
@@ -394,6 +404,7 @@ void PhysicsLoop(mj::Simulate &sim) {
                                     elapsedSim) > syncMisalign;
 
           // out-of-sync (for any reason): reset sync times, step
+          // 뭔가 느려져서 제어 시간이 안지켜졌을때 .
           if (elapsedSim < 0 || elapsedCPU.count() < 0 ||
               syncCPU.time_since_epoch().count() == 0 || misaligned ||
               sim.speedChanged) {
@@ -413,8 +424,9 @@ void PhysicsLoop(mj::Simulate &sim) {
             mj_step(m, d);
           }
 
+          // 대부분의 경우가 여기서 돌아감. <running>
           // in-sync: step until ahead of cpu
-          else {
+          else { 
             bool measured = false;
             mjtNum prevSim = d->time;
 
@@ -438,7 +450,7 @@ void PhysicsLoop(mj::Simulate &sim) {
               sim.applyposepertubations(0); // move mocap bodies only
               sim.applyforceperturbations();
 
-              apply_ctrl(sim.m, sim.d);
+              apply_ctrl(sim.m, sim.d); // 여기에 제어를 넣으면 됨. <제어량 입력> 
 
               // call mj_step
               mj_step(m, d);
@@ -467,8 +479,9 @@ void PhysicsLoop(mj::Simulate &sim) {
 
 //-------------------------------------- physics_thread
 //--------------------------------------------
-
-void PhysicsThread(mj::Simulate *sim, const char *filename) {
+// 이게 시뮬레이션 무한으로 돌려주는 부분
+void PhysicsThread(mj::Simulate *sim, const char *filename) { 
+  // 파일 주소 : msghandler -> simulation -> main문의 시뮬레이션 쓰레드 :: 결국 시뮬레이션에서 받아옴.
   // request loadmodel if file given (otherwise drag-and-drop)
   if (filename != nullptr) {
     m = LoadModel(filename, *sim);
@@ -537,13 +550,15 @@ int main(int argc, const char **argv) {
   std::thread physicsthreadhandle(&PhysicsThread, sim.get(), nullptr);
   auto message_handle =
       std::make_shared<deepbreak::MuJoCoMessageHandler>(sim.get());
-  actuator_cmds_ptr = message_handle->get_actuator_cmds_ptr();
-  auto spin_func = [](std::shared_ptr<deepbreak::MuJoCoMessageHandler> node_ptr) {
+  actuator_cmds_ptr = message_handle->get_actuator_cmds_ptr(); // muujocomsghandler의 actuator cmd가 담긴 포인터를 가져옴
+  auto spin_func = [](std::shared_ptr<deepbreak::MuJoCoMessageHandler> node_ptr) 
+  {
     rclcpp::spin(node_ptr);
   };
-  auto spin_thread = std::thread(spin_func, message_handle);
+  // auto spin_thread = std::thread(spin_func, message_handle);// spin function using message_handler thread
+  std::thread spin_thread(spin_func, message_handle);// spin function using message_handler thread
   // start simulation UI loop (blocking call)
-  sim->renderloop();
+  sim->renderloop(); 
   spin_thread.join();
   physicsthreadhandle.join();
 
