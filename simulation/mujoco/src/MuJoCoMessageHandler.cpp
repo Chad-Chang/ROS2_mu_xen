@@ -1,15 +1,14 @@
 #include "MuJoCoMessageHandler.h"
 
-#include "cv_bridge/cv_bridge.h"
-#include "sensor_msgs/image_encodings.hpp"
-
 namespace deepbreak {
 
 MuJoCoMessageHandler::MuJoCoMessageHandler(mj::Simulate *sim)
     : Node("MuJoCoMessageHandler"), sim_(sim), name_prefix("simulation/") {
+  
+  RCLCPP_INFO(this->get_logger(), "Start MuJoCoMessageHandler ...");
+  
   model_param_name = name_prefix + "model_file";
   this->declare_parameter(model_param_name, "");
-
 
   reset_service_ = this->create_service<communication::srv::SimulationReset>(
       name_prefix + "sim_reset",
@@ -17,54 +16,41 @@ MuJoCoMessageHandler::MuJoCoMessageHandler(mj::Simulate *sim)
                 std::placeholders::_1, std::placeholders::_2));
 
   auto qos = rclcpp::QoS(rclcpp::KeepLast(1), rmw_qos_profile_sensor_data);
-  imu_publisher_ = this->create_publisher<sensor_msgs::msg::Imu>(
+  imu_publisher_ = this->create_publisher<communication::msg::MclImu>(
       name_prefix + "imu_data", qos);
-  joint_state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>(
+  joint_state_publisher_ = this->create_publisher<communication::msg::MclActuator>(
       name_prefix + "joint_states", qos);
-  odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>(
-      name_prefix + "odom", qos);
-  touch_publisher_ = this->create_publisher<communication::msg::TouchSensor>(
-      name_prefix + "touch_sensor", qos);
-  depth_img_publisher_ptr_ = this->create_publisher<sensor_msgs::msg::Image>(
-      name_prefix + "depth_image", qos);
-  rgb_img_publisher_ptr_ = this->create_publisher<sensor_msgs::msg::Image>(
-      name_prefix + "rgb_image", qos);
+
 
   timers_.emplace_back(this->create_wall_timer(
       2.5ms, std::bind(&MuJoCoMessageHandler::imu_callback, this)));
   timers_.emplace_back(this->create_wall_timer(
       1ms, std::bind(&MuJoCoMessageHandler::joint_callback, this)));
   timers_.emplace_back(this->create_wall_timer(
-      20ms, std::bind(&MuJoCoMessageHandler::odom_callback, this)));
-  timers_.emplace_back(this->create_wall_timer(
-      2ms, std::bind(&MuJoCoMessageHandler::touch_callback, this)));
-  timers_.emplace_back(this->create_wall_timer(
-      20ms, std::bind(&MuJoCoMessageHandler::img_callback, this)));
-  timers_.emplace_back(this->create_wall_timer(
       100ms, std::bind(&MuJoCoMessageHandler::drop_old_message, this)));
   //  timers_.emplace_back(this->create_wall_timer(
   //     4s, std::bind(&MuJoCoMessageHandler::throw_box, this)));
  
   actuator_cmd_subscription_ =
-      this->create_subscription<communication::msg::ActuatorCmds>(
-          name_prefix + "actuators_cmds", qos,
-          std::bind(&MuJoCoMessageHandler::actuator_cmd_callback, this,
-                    std::placeholders::_1));
+    this->create_subscription<communication::msg::MclActuator>(
+        name_prefix + "actuators_cmds", qos,
+        std::bind(&MuJoCoMessageHandler::actuator_cmd_callback, this,
+                  std::placeholders::_1));
 
   param_subscriber_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
   cb_handle_ = param_subscriber_->add_parameter_callback(
       model_param_name, std::bind(&MuJoCoMessageHandler::parameter_callback,
                                   this, std::placeholders::_1));
 
-  actuator_cmds_ptr_ = std::make_shared<ActuatorCmds>();
-
-  RCLCPP_INFO(this->get_logger(), "Start MuJoCoMessageHandler ...");
-
   std::string model_file = this->get_parameter(model_param_name)
                                .get_parameter_value()
                                .get<std::string>();
   mju::strcpy_arr(sim_->filename, model_file.c_str());
   sim_->uiloadrequest.fetch_add(1);
+
+  //  subscribe하면 본인의 structure에 넣어주는 놈. -> 나중에 이름 바꿔줄 것
+  actuator_cmds_ptr_ = std::make_shared<ActuatorCmds>(); 
+
 }
 
 MuJoCoMessageHandler::~MuJoCoMessageHandler() {
@@ -124,85 +110,16 @@ void MuJoCoMessageHandler::reset_callback(
 
 void MuJoCoMessageHandler::imu_callback() {
   if (sim_->d != nullptr) {
-    auto message = sensor_msgs::msg::Imu();
+    auto imuState = communication::msg::MclImu();
     
-    message.header.frame_id = &sim_->m->names[0]; // quadMCL_scene  : 파일 이름이 출력되네?
+    imuState.header.frame_id = &sim_->m->names[0]; // quadMCL_scene  : 파일 이름이 출력되네?
     
-    message.header.stamp = rclcpp::Clock().now();
+    imuState.header.stamp = rclcpp::Clock().now();
     
     const std::lock_guard<std::mutex> lock(sim_->mtx);
-  
-    for (int i = 0; i < sim_->m->nsensor; i++) {
-      if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_ACCELEROMETER) {
-        message.linear_acceleration.x =
-            sim_->d->sensordata[sim_->m->sensor_adr[i]];
-        message.linear_acceleration.y =
-            sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
-        message.linear_acceleration.z =
-            sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
-      } else if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_FRAMEQUAT) {
-        message.orientation.w = sim_->d->sensordata[sim_->m->sensor_adr[i]];
-        message.orientation.x = sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
-        message.orientation.y = sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
-        message.orientation.z = sim_->d->sensordata[sim_->m->sensor_adr[i] + 3];
-      } else if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_GYRO) {
-        message.angular_velocity.x =
-            sim_->d->sensordata[sim_->m->sensor_adr[i]];
-        message.angular_velocity.y =
-            sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
-        message.angular_velocity.z =
-            sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
-      }
-    }
-    imu_publisher_->publish(message);
-  }
-}
+    RCLCPP_INFO(this -> get_logger(), "publish imu sensor");
 
-void MuJoCoMessageHandler::touch_callback() {
-  const std::lock_guard<std::mutex> lock(sim_->mtx);
-  if (sim_->d != nullptr) {
-    auto message = communication::msg::TouchSensor();
-    message.header.frame_id = &sim_->m->names[0];
-    message.header.stamp = rclcpp::Clock().now();
-
-    std::vector<std::string> tourch_sensors = {"fl_touch", "fr_touch",
-                                               "hl_touch", "hr_touch"};
-    for (auto &name : tourch_sensors) {
-      // using model name -> find id
-      int idx = mj_name2id(sim_->m, mjOBJ_SENSOR, name.c_str()); // string to char
-      // RCLCPP_INFO(this->get_logger(), "id = %d , string = %s", idx, name.c_str());
-      if (idx > -1) {
-        message.value.emplace_back(
-            sim_->d->sensordata[sim_->m->sensor_adr[idx]]);
-      } else {
-        RCLCPP_WARN(this->get_logger(), "Request sensor %s does not exist",
-                    name.c_str());
-      }
-    }
-    touch_publisher_->publish(message);
-  }
-}
-
-void MuJoCoMessageHandler::odom_callback() {
-  const std::lock_guard<std::mutex> lock(sim_->mtx);
-  if (sim_->d != nullptr) {
-    auto message = nav_msgs::msg::Odometry();
-    message.header.frame_id = &sim_->m->names[0];
-    message.header.stamp = rclcpp::Clock().now();
-    message.pose.pose.position.x = sim_->d->qpos[0];
-    message.pose.pose.position.y = sim_->d->qpos[1];
-    message.pose.pose.position.z = sim_->d->qpos[2];
-    message.pose.pose.orientation.w = sim_->d->qpos[3];
-    message.pose.pose.orientation.x = sim_->d->qpos[4];
-    message.pose.pose.orientation.y = sim_->d->qpos[5];
-    message.pose.pose.orientation.z = sim_->d->qpos[6];
-    message.twist.twist.linear.x = sim_->d->qvel[0];
-    message.twist.twist.linear.y = sim_->d->qvel[1];
-    message.twist.twist.linear.z = sim_->d->qvel[2];
-    message.twist.twist.angular.x = sim_->d->qvel[3];
-    message.twist.twist.angular.y = sim_->d->qvel[4];
-    message.twist.twist.angular.z = sim_->d->qvel[5];
-    odom_publisher_->publish(message);
+    imu_publisher_->publish(imuState);
   }
 }
 
@@ -210,58 +127,20 @@ void MuJoCoMessageHandler::joint_callback() {
   const std::lock_guard<std::mutex> lock(sim_->mtx);
 
   if (sim_->d != nullptr) {
-    sensor_msgs::msg::JointState jointState;
+    communication::msg::MclActuator jointState;
+
     jointState.header.frame_id = &sim_->m->names[0];
     jointState.header.stamp = rclcpp::Clock().now();
-    for (int i = 0; i < sim_->m->njnt; i++) {
-      if (sim_->m->jnt_type[i] == mjtJoint::mjJNT_HINGE) {
-        std::string jnt_name(mj_id2name(sim_->m, mjtObj::mjOBJ_JOINT, i));
-        jointState.name.emplace_back(jnt_name);
-        jointState.position.push_back(sim_->d->qpos[sim_->m->jnt_qposadr[i]]);
-        jointState.velocity.push_back(sim_->d->qvel[sim_->m->jnt_dofadr[i]]);
-        jointState.effort.push_back(
-            sim_->d->qfrc_actuator[sim_->m->jnt_dofadr[i]]);
-      }
-    }
+    RCLCPP_INFO(this->get_logger(), "publish joint sensor");
     joint_state_publisher_->publish(jointState);
   }
 }
 
-void MuJoCoMessageHandler::img_callback() {
-  if (sim_->d != nullptr) {
-    const std::lock_guard<std::mutex> lock(sim_->mtx);
-    sensor_msgs::msg::Image depth_img;
-    depth_img.header.frame_id = &sim_->m->names[0];
-    depth_img.header.stamp = this->now();
-
-    cv::Mat rgb_img_mat, depth_img_mat;
-    cv_bridge::CvImage cv_img(depth_img.header,
-                              sensor_msgs::image_encodings::TYPE_64FC1,
-                              depth_img_mat);
-  }
-
-  // depth_img.encoding = sensor_msgs::image_encodings::TYPE_64FC1;
-}
-
 void MuJoCoMessageHandler::actuator_cmd_callback(
-    const communication::msg::ActuatorCmds::SharedPtr msg) const {
+    const communication::msg::MclActuator::SharedPtr msg) const {
+      // std::cout << "it is working bebe"<<std::endl;
   if (sim_->d != nullptr) {
-    actuator_cmds_ptr_->time = this->now().seconds();
-    actuator_cmds_ptr_->actuators_name.resize(msg->actuators_name.size());
-    actuator_cmds_ptr_->kp.resize(msg->kp.size());
-    actuator_cmds_ptr_->pos.resize(msg->pos.size());
-    actuator_cmds_ptr_->kd.resize(msg->kd.size());
-    actuator_cmds_ptr_->vel.resize(msg->vel.size());
-    actuator_cmds_ptr_->torque.resize(msg->torque.size());
-    for (size_t k = 0; k < msg->actuators_name.size(); k++) {
-      actuator_cmds_ptr_->actuators_name[k] = msg->actuators_name[k];
-      actuator_cmds_ptr_->kp[k] = msg->kp[k];
-      actuator_cmds_ptr_->pos[k] = msg->pos[k];
-      actuator_cmds_ptr_->kd[k] = msg->kd[k];
-      actuator_cmds_ptr_->vel[k] = msg->vel[k];
-      actuator_cmds_ptr_->torque[k] = msg->torque[k];
-    }
-    // RCLCPP_INFO(this->get_logger(), "subscribe actuator cmds");
+    RCLCPP_INFO(this->get_logger(), "subscribe actuator cmds");
   }
 }
 
@@ -286,6 +165,41 @@ void MuJoCoMessageHandler::drop_old_message() {
   }
 }
 
+std::shared_ptr<MuJoCoMessageHandler::ActuatorCmds>
+MuJoCoMessageHandler::get_actuator_cmds_ptr() {
+  return actuator_cmds_ptr_;
+}
+
+} // namespace deepbreak
+
+//======================================나중에 참조====================================//
+
+// void MuJoCoMessageHandler::touch_callback() {
+//   const std::lock_guard<std::mutex> lock(sim_->mtx);
+//   if (sim_->d != nullptr) {
+//     auto message = communication::msg::TouchSensor();
+//     message.header.frame_id = &sim_->m->names[0];
+//     message.header.stamp = rclcpp::Clock().now();
+
+//     std::vector<std::string> tourch_sensors = {"fl_touch", "fr_touch",
+//                                                "hl_touch", "hr_touch"};
+//     for (auto &name : tourch_sensors) {
+//       // using model name -> find id
+//       int idx = mj_name2id(sim_->m, mjOBJ_SENSOR, name.c_str()); // string to char
+//       // RCLCPP_INFO(this->get_logger(), "id = %d , string = %s", idx, name.c_str());
+//       if (idx > -1) {
+//         message.value.emplace_back(
+//             sim_->d->sensordata[sim_->m->sensor_adr[idx]]);
+//       } else {
+//         RCLCPP_WARN(this->get_logger(), "Request sensor %s does not exist",
+//                     name.c_str());
+//       }
+//     }
+//     touch_publisher_->publish(message);
+//   }
+// }
+
+
 // void MuJoCoMessageHandler::throw_box() {
 //   const std::lock_guard<std::mutex> lock(sim_->mtx);
 //   int nq = sim_->m->nq - 1;
@@ -303,22 +217,10 @@ void MuJoCoMessageHandler::drop_old_message() {
 //     switch (i) {
 //     case 0:
 //       pos = {0.45, 0, 0.5};
-int main(int argc, const int **argv[])
-{
-    rclcpp::init(argc,argv);
-    std::cout << "main" <<std::endl;
-
-}
 //       vel = {0, 0, -1.5};
 //       break;
 
 //     case 1:
-int main(int argc, const int **argv[])
-{
-    rclcpp::init(argc,argv);
-    std::cout << "main" <<std::endl;
-
-}
 //       pos = {0.15, -0.5, 0.2};
 //       vel = {0, 2.5, 0};
 //       break;
@@ -356,9 +258,100 @@ int main(int argc, const int **argv[])
 //   }
 // }
 
-std::shared_ptr<MuJoCoMessageHandler::ActuatorCmds>
-MuJoCoMessageHandler::get_actuator_cmds_ptr() {
-  return actuator_cmds_ptr_;
-}
+// void MuJoCoMessageHandler::odom_callback() {
+//   const std::lock_guard<std::mutex> lock(sim_->mtx);
+//   if (sim_->d != nullptr) {
+//     auto message = nav_msgs::msg::Odometry();
+//     message.header.frame_id = &sim_->m->names[0];
+//     message.header.stamp = rclcpp::Clock().now();
+//     message.pose.pose.position.x = sim_->d->qpos[0];
+//     message.pose.pose.position.y = sim_->d->qpos[1];
+//     message.pose.pose.position.z = sim_->d->qpos[2];
+//     message.pose.pose.orientation.w = sim_->d->qpos[3];
+//     message.pose.pose.orientation.x = sim_->d->qpos[4];
+//     message.pose.pose.orientation.y = sim_->d->qpos[5];
+//     message.pose.pose.orientation.z = sim_->d->qpos[6];
+//     message.twist.twist.linear.x = sim_->d->qvel[0];
+//     message.twist.twist.linear.y = sim_->d->qvel[1];
+//     message.twist.twist.linear.z = sim_->d->qvel[2];
+//     message.twist.twist.angular.x = sim_->d->qvel[3];
+//     message.twist.twist.angular.y = sim_->d->qvel[4];
+//     message.twist.twist.angular.z = sim_->d->qvel[5];
+//     odom_publisher_->publish(message);
+//   }
+// }
 
-} // namespace deepbreak
+// void MuJoCoMessageHandler::imu_callback() {
+//   if (sim_->d != nullptr) {
+//     auto message = sensor_msgs::msg::Imu();
+    
+//     message.header.frame_id = &sim_->m->names[0]; // quadMCL_scene  : 파일 이름이 출력되네?
+    
+//     message.header.stamp = rclcpp::Clock().now();
+    
+//     const std::lock_guard<std::mutex> lock(sim_->mtx);
+  
+//     for (int i = 0; i < sim_->m->nsensor; i++) {
+//       if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_ACCELEROMETER) {
+//         message.linear_acceleration.x =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i]];
+//         message.linear_acceleration.y =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
+//         message.linear_acceleration.z =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
+//       } else if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_FRAMEQUAT) {
+//         message.orientation.w = sim_->d->sensordata[sim_->m->sensor_adr[i]];
+//         message.orientation.x = sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
+//         message.orientation.y = sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
+//         message.orientation.z = sim_->d->sensordata[sim_->m->sensor_adr[i] + 3];
+//       } else if (sim_->m->sensor_type[i] == mjtSensor::mjSENS_GYRO) {
+//         message.angular_velocity.x =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i]];
+//         message.angular_velocity.y =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i] + 1];
+//         message.angular_velocity.z =
+//             sim_->d->sensordata[sim_->m->sensor_adr[i] + 2];
+//       }
+//     }
+//     imu_publisher_->publish(message);
+//   }
+// }
+
+
+// void MuJoCoMessageHandler::img_callback() {
+//   if (sim_->d != nullptr) {
+//     const std::lock_guard<std::mutex> lock(sim_->mtx);
+//     sensor_msgs::msg::Image depth_img;
+//     depth_img.header.frame_id = &sim_->m->names[0];
+//     depth_img.header.stamp = this->now();
+
+//     cv::Mat rgb_img_mat, depth_img_mat;
+//     cv_bridge::CvImage cv_img(depth_img.header,
+//                               sensor_msgs::image_encodings::TYPE_64FC1,
+//                               depth_img_mat);
+//   }
+
+//   // depth_img.encoding = sensor_msgs::image_encodings::TYPE_64FC1;
+// }
+
+
+// void MuJoCoMessageHandler::joint_callback() {
+//   const std::lock_guard<std::mutex> lock(sim_->mtx);
+
+//   if (sim_->d != nullptr) {
+//     sensor_msgs::msg::JointState jointState;
+//     jointState.header.frame_id = &sim_->m->names[0];
+//     jointState.header.stamp = rclcpp::Clock().now();
+//     for (int i = 0; i < sim_->m->njnt; i++) {
+//       if (sim_->m->jnt_type[i] == mjtJoint::mjJNT_HINGE) {
+//         std::string jnt_name(mj_id2name(sim_->m, mjtObj::mjOBJ_JOINT, i));
+//         jointState.name.emplace_back(jnt_name);
+//         jointState.position.push_back(sim_->d->qpos[sim_->m->jnt_qposadr[i]]);
+//         jointState.velocity.push_back(sim_->d->qvel[sim_->m->jnt_dofadr[i]]);
+//         jointState.effort.push_back(
+//             sim_->d->qfrc_actuator[sim_->m->jnt_dofadr[i]]);
+//       }
+//     }
+//     joint_state_publisher_->publish(jointState);
+//   }
+// }

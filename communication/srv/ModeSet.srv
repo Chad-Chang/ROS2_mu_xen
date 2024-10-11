@@ -1,0 +1,7 @@
+std_msgs/Header header
+string ctrl_mode
+bool set_gain_sim
+bool set_gain
+
+---
+bool is_success

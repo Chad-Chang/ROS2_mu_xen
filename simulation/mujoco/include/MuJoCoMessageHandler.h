@@ -13,7 +13,8 @@
 #include "communication/msg/actuator_cmds.hpp"
 #include "communication/msg/touch_sensor.hpp"
 #include "communication/srv/simulation_reset.hpp"
-
+#include "communication/msg/mcl_actuator.hpp" 
+#include "communication/msg/mcl_imu.hpp" 
 
 #include "array_safety.h"
 #include "simulate.h"
@@ -50,16 +51,10 @@ private:
 
   void imu_callback();
 
-  void odom_callback();
-
-  void touch_callback();
-
   void joint_callback();
 
-  void img_callback();
-
   void actuator_cmd_callback(
-      const communication::msg::ActuatorCmds::SharedPtr msg) const; // 보증을 의미함.
+      const communication::msg::MclActuator::SharedPtr msg) const; // 보증을 의미함.
 
   void parameter_callback(const rclcpp::Parameter &);
 
@@ -70,17 +65,15 @@ private:
   mj::Simulate *sim_; // fixed pointer 
   std::string name_prefix, model_param_name;
   std::vector<rclcpp::TimerBase::SharedPtr> timers_;
-  rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_publisher_;
-  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr
+  rclcpp::Publisher<communication::msg::MclImu>::SharedPtr
+      imu_publisher_;
+  rclcpp::Publisher<communication::msg::MclActuator>::SharedPtr
       joint_state_publisher_;
-  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_publisher_;
-  rclcpp::Publisher<communication::msg::TouchSensor>::SharedPtr touch_publisher_;
 
-  Publisher<sensor_msgs::msg::Image>::SharedPtr depth_img_publisher_ptr_;
-  Publisher<sensor_msgs::msg::Image>::SharedPtr rgb_img_publisher_ptr_;
-
-  rclcpp::Subscription<communication::msg::ActuatorCmds>::SharedPtr
+  rclcpp::Subscription<communication::msg::MclActuator>::SharedPtr
       actuator_cmd_subscription_;
+
+
   rclcpp::Service<communication::srv::SimulationReset>::SharedPtr reset_service_;
 
   std::shared_ptr<rclcpp::ParameterEventHandler> param_subscriber_;
@@ -88,7 +81,6 @@ private:
   std::shared_ptr<rclcpp::ParameterCallbackHandle> cb_handle_;
 
   std::shared_ptr<ActuatorCmds> actuator_cmds_ptr_;
-
   // std::thread spin_thread;
 };
 

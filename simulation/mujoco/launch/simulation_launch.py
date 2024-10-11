@@ -10,7 +10,11 @@ def generate_launch_description():
 #    xml_file_name = "model/xml/spot_mini/spot_mini.xml"
     xml_file_name = "model/scene.xml"
     xml_file = os.path.join(get_package_share_path("description"), xml_file_name)
-
+    
+    ctrl_param_dir = LaunchConfiguration('ctrl_param_dir',default=os.path.join(
+    	get_package_share_path('mcl'),
+    	'param','ctrl_param_config.yaml'))
+    
     return LaunchDescription(
         [
             Node(
@@ -23,15 +27,13 @@ def generate_launch_description():
                     {"simulation/model_file": xml_file},
                 ],
                 emulate_tty=True,
-                arguments=[("__log_level:=debug")],
-            ),
-            Node(
-            	package="mcl",
-            	executable="mcl_node",
-            	name="mcl",
-            	output="screen",
-            ),
-            
- 
+                arguments=[("__log_level:=debug")],),
+
+#            Node(
+#            	package="mcl",
+#            	executable="mcl_node",
+#            	name="mcl",
+#            	parameters=[ctrl_param_dir],
+#            	output="screen",),
         ]
     )

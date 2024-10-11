@@ -1,5 +1,8 @@
 # Messages
-builtin_interfaces/Time stamp
+#builtin_interfaces/Time stamp
+std_msgs/Header header
+
+bool mode  # simulation:0 or real:1
 
 string[<=30] actuators_name
 float32[<=30] pos

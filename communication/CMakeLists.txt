@@ -31,9 +31,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 	msg/MclActuator.msg
         msg/MclImu.msg
+#        msg/MclTouch.msg
        
         srv/SimulationReset.srv
         srv/GaitSwitch.srv
+        srv/ModeSet.srv
+        
         DEPENDENCIES ament_cmake std_msgs geometry_msgs sensor_msgs 
         )
 

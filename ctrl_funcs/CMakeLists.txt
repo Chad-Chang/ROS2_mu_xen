@@ -30,7 +30,19 @@ find_package(cv_bridge REQUIRED)
 
 include_directories(include)
 
-add_executable(mcl_node src/main.cpp)
+set(SOURCES 
+	src/main.cpp
+	src/controller.cpp
+	src/filter.cpp
+	src/msg_handler.cpp
+	src/kinodynamics.cpp
+	src/trajectory.cpp
+	src/logging.cpp
+)
+
+#add_executable(mcl_node src/main.cpp src/msg_handler.cpp)
+add_executable(mcl_node ${SOURCES})
+
 ament_target_dependencies(mcl_node
   communication
   rclcpp
