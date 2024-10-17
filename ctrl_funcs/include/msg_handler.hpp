@@ -37,6 +37,7 @@ public:
         std::vector<double> jcurrent;
         std::vector<std::string> imu_name;
         std::vector<double> imu; // 아직 어떻게 데이터를 받을지 모르겠네?
+        std::vector<double> jtorque;
         
     };
     struct SimRobotState // 시뮬레이션에서 받을 데이터 : 나중에 공유 포인터로 데이터 접근할 계획
@@ -46,8 +47,8 @@ public:
         std::vector<double> jpos;
         std::vector<double> jvel;
         std::vector<std::string> imu_name;
+        std::vector<double> jtorque;
         std::vector<double> imu;
-
         std::vector<double> kp_rw;
         std::vector<double> ki_rw;
         std::vector<double> kd_rw;
@@ -65,44 +66,41 @@ public:
     MsgHandler();
     ~MsgHandler();
     
-    // std::shared_ptr<SimRobotState> get_sim_cmd_ptr(); // sim pos, vel torq .. 구조체 접근 : 구독한데이터 저장
-    // std::shared_ptr<RealRobotState> get_real_cmd_ptr(); // real pos -> 구독한 데이터 저장
+
+    std::shared_ptr<SimRobotState> get_sim_cmd_ptr(); // sim pos, vel torq .. 구조체 접근 : 구독한데이터 저장
+    std::shared_ptr<RealRobotState> get_real_cmd_ptr(); // real pos -> 구독한 데이터 저장
 
 private:
+            // 나중
+    // void update_parameter
+    //     (std::shared_ptr<SimRobotState> sim_state_cmd_ptr, std::shared_ptr<RealRobotState> real_state_cmd_ptr);
+    void update_parameter();
+    
     std::string sim_name_prefix, real_name_prefix;
     void ctrl_callback(); // publish 뭔가 주기마다 쏴주면 안될꺼같은 느낌 -> 계산되고 쏴줘야할꺼같은데 주기적으로 하면 안될꺼같은 느낌임.
     void sensor_jnt_callback(const communication::msg::MclActuator::SharedPtr msg) const; // sensor subscrib
     void sensor_imu_callback(const communication::msg::MclImu::SharedPtr msg) const; //sensor subscrib
-
-    // std::string name_prefix, model_param_name;
     
-    // rclcpp::Subscription<communication::msg::MclImu>::SharedPtr
-    //   imu_real_subsc_;
     // // state 
     rclcpp::Subscription<communication::msg::MclActuator>::SharedPtr
       jnt_sim_subsc_;
     rclcpp::Subscription<communication::msg::MclImu>::SharedPtr
-      imu_sim_subsc_;
-    // rclcpp::Subscription<communication::msg::MclActuator>::SharedPtr
-    //   jnt_real_subsc_;
-    
+      imu_sim_subsc_;    
             /*simulation*/
     rclcpp::Publisher<communication::msg::MclActuator>::SharedPtr ctrl_sim_pub_;
-    std::shared_ptr<SimRobotState> sim_state_cmd_ptr();
     
             /*real robot*/ 
     // rclcpp::Publisher<communication::msg::MclActuator>::SharedPtr ctrl_real_pub_;
     // std::shared_ptr<RealRobotState> real_state_cmd_ptr();
 
     // rclcpp::Service<communication::srv::SimulationReset>::SharedPtr service_;
-
-    // std::shared_ptr<rclcpp::ParameterEventHandler> param_subscriber_;
-
-    // std::shared_ptr<rclcpp::ParameterCallbackHandle> cb_handle_;
-
     
+    rclcpp::Subscription<rcl_interfaces::msg::ParameterEvent>::SharedPtr parameter_event_sub_;
+    rclcpp::AsyncParametersClient::SharedPtr parameters_client_;
 
-    
     std::vector<rclcpp::TimerBase::SharedPtr> timers_;
+    
+    std::shared_ptr<SimRobotState> sim_state_cmd_ptr_;
+    std::shared_ptr<RealRobotState> real_state_cmd_ptr_;
 
 };

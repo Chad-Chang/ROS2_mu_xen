@@ -18,6 +18,26 @@ using namespace Eigen;
 using namespace std;
 
 struct LegModel{
+    LegModel(int leg_num_):leg_num(leg_num_){};
+    int leg_num;
+    /* joint */
+    double q_br;
+    double q_abd; // add/abd
+    double qdot_abd; // add/abd
+
+    bool rwdob_on;
+
+    Vector2d q_bi;    // Serial Coordinates
+    Vector2d q_bi_old; // gravity,coriolis
+    
+    Vector2d qdot_bi;
+    Vector2d qdot_bi_old;
+    Vector2d qddot_bi;
+    Vector2d qddot_bi_old;
+
+    Vector2d torque_bi;
+    Vector2d torque_bi_old;
+
     /* Rotating Workspace Coordinates */
     Vector2d posRW; // RW position
     Vector2d posRW_old;
@@ -33,9 +53,8 @@ struct LegModel{
     Vector2d velRW_ref; // RW velocity reference
     Vector2d velRW_ref_old;
 
-    double ctrl_input_RW[NDOF_LEG]; // control input
-    double ctrl_input_RW_old[NDOF_LEG];
-
+    Vector2d ctrl_input_RW; // control input
+    Vector2d ctrl_input_RW_old;
 
     /* Jacobian (Rotating Workspace) */
     Matrix2d jacbRW;
@@ -47,4 +66,8 @@ struct LegModel{
 
     Vector2d H; // Coriolis & Gravity term
     Vector2d H_old;
+
+    Matrix2d force_ext_hat; // FOB를 통해 측정된 힘.
+    Matrix2d torque_ext_hat; // FOB를 통해 추정된 토크
 };
+

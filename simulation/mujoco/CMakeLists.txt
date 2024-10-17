@@ -42,8 +42,10 @@ endif()
 
 file(GLOB_RECURSE source ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc)
 add_executable(simulation ${source})
-target_link_libraries(simulation mujoco glfw pthread rt ${CMAKE_DL_LIBS})
-ament_target_dependencies(simulation sensor_msgs rclcpp communication geometry_msgs tf2 tf2_ros nav_msgs cv_bridge)
+target_link_libraries(simulation 
+	mujoco glfw pthread rt ${CMAKE_DL_LIBS})
+ament_target_dependencies(simulation 
+	sensor_msgs rclcpp communication geometry_msgs tf2 tf2_ros nav_msgs cv_bridge)
 target_include_directories(simulation PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>)

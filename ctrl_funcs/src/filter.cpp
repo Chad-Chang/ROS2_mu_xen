@@ -3,9 +3,9 @@
 double Filter::dt_; // 이거 쫌 보기 그렇다 .
 double Filter::pi_;
 
-Filter::Filter(double sampling_time)
+Filter::Filter()
 {
-    dt_ = sampling_time;
+    dt_ = 0.001;
     pi_= 3.14159265358979323846;
 }
 Filter::~Filter(){}

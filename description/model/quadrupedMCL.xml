@@ -14,7 +14,7 @@
 
         <default class="abduction">
           <!-- <joint axis="1 0 0" range="-1.0472 1.0472" limited="true"/> -->
-          <joint range="-1.0472 1.0472" limited="true"/>
+          <joint  axis="1 0 0" range="-1.0472 1.0472" limited="true"/>
           <!-- <motor gear="50"/> -->
         </default>
 
@@ -167,15 +167,18 @@
       <motor    name="torque_HAA_FL"    joint="HAA_FL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
       <motor    name="torque_HFE_FL"    joint="HFE_FL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
       <motor    name="torque_KFE_FL"    joint="KFE_FL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
-      <motor    name="torque_HAA_FR"    joint="HAA_FR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
-      <motor    name="torque_HFE_FR"    joint="HFE_FR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      
       <motor    name="torque_KFE_FR"    joint="KFE_FR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
-      <motor    name="torque_HAA_RL"    joint="HAA_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
-      <motor    name="torque_HFE_RL"    joint="HFE_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
-      <motor    name="torque_KFE_RL"    joint="KFE_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      <motor    name="torque_HFE_FR"    joint="HFE_FR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      <motor    name="torque_HAA_FR"    joint="HAA_FR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      
       <motor    name="torque_HAA_RR"    joint="HAA_RR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
       <motor    name="torque_HFE_RR"    joint="HFE_RR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
       <motor    name="torque_KFE_RR"    joint="KFE_RR"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+
+      <motor    name="torque_KFE_RL"    joint="KFE_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      <motor    name="torque_HFE_RL"    joint="HFE_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
+      <motor    name="torque_HAA_RL"    joint="HAA_RL"  gear="1" ctrllimited="true" ctrlrange="-100 100" />
   	</actuator>
 
     <sensor>
